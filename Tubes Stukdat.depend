@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1584020928 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\main.cpp
+	"General-Header.h"
+	"List-Parent-Movie.h"
+
+1584022345 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\general-header.h
+	<iostream>
+
+1584022368 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\list-parent-movie.h
+	"General-Header.h"
+
+1584022188 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\list-parent-movie.cpp
+	"General-Header.h"
+	"List-Parent-Movie.h"
+

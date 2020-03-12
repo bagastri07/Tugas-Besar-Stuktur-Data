@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="General-Header.h" />
 		<Unit filename="List-Parent-Movie.cpp" />
 		<Unit filename="List-Parent-Movie.h" />
 		<Unit filename="main.cpp" />
