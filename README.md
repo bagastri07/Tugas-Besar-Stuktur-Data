@@ -9,8 +9,8 @@
 > Tugas Besar Struktur Data. Dalam topik Tugas Besar ini akan membahas ....<br><br>
 
 ### List initialize
->- List parent = 
->- List child = 
->- List Connect = 
+>- List Parent 1 = Movie
+>- List Parent 2 = Reviewer
+>- List Relasi = Ulasan
 
 ### End of README.md
