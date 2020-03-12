@@ -1,6 +1,4 @@
-#include <iostream>
-
-using namespace std;
+#include "List-Parent-Movie.h"
 
 int main()
 {
