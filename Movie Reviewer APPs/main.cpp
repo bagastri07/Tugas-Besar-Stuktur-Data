@@ -4,7 +4,7 @@
 int main()
 {
     //Testing LIST PARENT MOVIE (STATUS 100% Working)
-    List_Movie ListMovie;
+    /*List_Movie ListMovie;
     address_Movie A; // A = Address dari elmlist_Movie
     createListMovie(ListMovie);
     A = createElmMovie("Gundala","2019");
@@ -19,7 +19,10 @@ int main()
     insertLastMovie(ListMovie,A);
     viewListMovie(ListMovie);
     deleteElmMovie(ListMovie, "Jokera"); //Uji coba Procedur Delete
-    viewListMovie(ListMovie);
+    viewListMovie(ListMovie);*/
+    greetingAdmin("BagasKuhaku09");
+    adminMenu();
+
 
 
     return 0;

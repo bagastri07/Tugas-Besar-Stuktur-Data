@@ -9,4 +9,10 @@
 
 using namespace std;
 
+void loginMenu();
+void adminMenu();
+void userMenu();
+void greetingUser(string username);
+void greetingAdmin(string adminName);
+
 #endif // GENERAL-HEADER_H_INCLUDED
