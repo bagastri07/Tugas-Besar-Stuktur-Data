@@ -5,11 +5,11 @@
 >- Maulana Farrel Ceskicevas / **1301190311**<br>
 >- IF-43-04 / **Telkom University**<br>
 
-### Our Lecture
+### Our Lecturer
 >- Rita Rismala, S.T., M.T. <br>
 
 ### Description
-> Tugas Besar Struktur Data. Dalam topik Tugas Besar kami akan membuat Movie Reviewer APPs yang memeliki Spesifikasi Umum, seperti :
+> Tugas Besar Struktur Data. Dalam topik Tugas Besar kami akan membuat Movie Reviewer APPs yang memeliki Spesifikasi Umum, seperti : <br><br>
 > **Main Menu** <br>
 >- Log In Admin <br>
 >- Log In User <br>
