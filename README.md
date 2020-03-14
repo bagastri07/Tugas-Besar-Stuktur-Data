@@ -10,12 +10,13 @@
 
 ### Description
 > Tugas Besar Struktur Data. Dalam topik Tugas Besar kami akan membuat Movie Reviewer APPs yang memeliki Spesifikasi Umum, seperti : <br><br>
-## Main Menu
->- Log In Admin <br>
->- Log In User <br>
->- Register New User <br>
-## Admin Menu
->- Insert New Movie <br>
+**Main Menu** <br>
+  1. Log In Admin <br>
+  2. Log In User <br>
+  3. Register New User <br>
+**Admin Menu**<br>
+  1. Insert New Movie <br>
+  2. View All Movie <br>
 
 ### List initialize
 >- List Parent 1 = Movie
