@@ -14,7 +14,7 @@
   >- Log In Admin
   >- Log In User 
   >- Register New User
-**Admin Menu**<br>
+<br>**Admin Menu**<br>
   >- Insert New Movie 
   >- View All Movie 
 
