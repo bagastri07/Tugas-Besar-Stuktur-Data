@@ -20,15 +20,14 @@
 	"General-Header.h"
 	"List-Parent-Movie.h"
 
-1584178513 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-header.h
+1584182300 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-header.h
 	<iostream>
 	<conio.h>
-	<string>
 
 1584175630 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-movie.h
 	"General-Header.h"
 
-1584178639 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-implement.cpp
+1584182230 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-implement.cpp
 	"General-Header.h"
 
 1584177056 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\main.cpp

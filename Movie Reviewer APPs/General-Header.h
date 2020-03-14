@@ -2,7 +2,7 @@
 #define GENERAL-HEADER_H_INCLUDED
 #include <iostream>
 #include <conio.h>
-#include <string>
+//#include <string>
 #define Next(P) P->Next
 #define Prev(P) P->Prev
 #define Info(P) P->Info

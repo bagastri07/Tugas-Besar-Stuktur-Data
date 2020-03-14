@@ -50,14 +50,27 @@ void greetingAdmin(string adminName) {
     cout << "Your're login as '"<<adminName<<"' (Admin)\n";
 }
 void insertPasword(string &password) {
-    password = "";
+    char pass[32];
     char ch;
-    ch = _getch();
-    while (ch != 13) { // 13 = enter in char
-        password.push_back(ch);
-        cout << '*';
+    bool Enter = false;
+    int i = 0;
+    while (!Enter) { // looping for ever
+        password = "";
         ch = _getch();
+        if ((ch>='a' && ch<='z') || (ch>='A' && ch<='Z') || (ch>='0' && ch<='9')) {
+            pass[i]=ch; //store the ch to the pass
+            cout << '*';
+            i++;
+        }
+        if (ch=='\b' && i>=1) {
+            cout << "\b \b"; //to delete wrong character that user input
+            i--;
+        }
+        if (ch=='\r') { //r is Enter or 13 charecter code (enter)
+            Enter = true;
+        }
     }
+    password = pass;
 }
 void loginForAdmin(admin theAdmin[2]) {
     cout << "*************************************************************\n";
