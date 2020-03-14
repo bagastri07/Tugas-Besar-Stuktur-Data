@@ -49,3 +49,47 @@ void greetingAdmin(string adminName) {
     cout << "Welcome Back!!!\n";
     cout << "Your're login as '"<<adminName<<"' (Admin)\n";
 }
+void insertPasword(string &password) {
+    password = "";
+    char ch;
+    ch = _getch();
+    while (ch != 13) { // 13 = enter in char
+        password.push_back(ch);
+        cout << '*';
+        ch = _getch();
+    }
+}
+void loginForAdmin(admin theAdmin[2]) {
+    cout << "*************************************************************\n";
+    cout << "*                   Movie Reviewer APPs                     *\n";
+    cout << "                        Admin Login                         *\n";
+    cout << "*************************************************************\n";
+    string username, password;
+
+    cout << "Username : ";
+    cin >> username;
+    cout << "Password : ";
+    insertPasword(password);
+    cout << endl;
+    if (validasiAdmin(theAdmin, username, password)) {
+        greetingAdmin(username);
+    } else {
+        cout << "The username and/or password you specified are not correct.\n";
+    }
+
+}
+bool validasiAdmin(admin theAdmin[2], string username, string password) {
+    bool check = false;
+    for (int i = 0; i < 2; i++) {
+        if (username == theAdmin[i].username && password == theAdmin[i].password) {
+            check = true;
+        }
+    }
+    return check;
+}
+void loadDataAdmin(admin theAdmin[2]) {
+    theAdmin[0].username = "BagasTri07";
+    theAdmin[0].password = "sayaAdmin";
+    theAdmin[1].username = "MaulanaFC";
+    theAdmin[1].password = "sayaJuga";
+}

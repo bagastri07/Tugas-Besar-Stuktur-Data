@@ -99,3 +99,17 @@ void deleteElmMovie(List_Movie &L, string judul) {
         cout<<"Judul Film tidak ditemukan"<<endl;
     }
 }
+void loadDataMovies(List_Movie &L) {
+    createListMovie(L);
+    address_Movie A;
+    A = createElmMovie("Gundala","2019");
+    insertLastMovie(L,A);
+    A = createElmMovie("Ayat-Ayat Cinta 2","2018");
+    insertLastMovie(L,A);
+    A = createElmMovie("Hit & Run","2019");
+    insertLastMovie(L,A);
+    A = createElmMovie("Spider Man : Far From Home","2019");
+    insertLastMovie(L,A);
+    A = createElmMovie("Joker","2019");
+    insertLastMovie(L,A);
+}

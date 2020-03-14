@@ -29,5 +29,6 @@ void deleteLastMovie(List_Movie &L, address_Movie &P);
 void deleteAfterMovie(address_Movie Prec, address_Movie &P);
 address_Movie searchElmMovie(List_Movie L, string judul);
 void deleteElmMovie(List_Movie &L, string judul);
+void loadDataMovies(List_Movie &L);
 
 #endif // LIST-PARENT-MOVIE_H_INCLUDED
