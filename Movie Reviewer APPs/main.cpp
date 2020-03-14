@@ -3,7 +3,7 @@
 
 int main()
 {
-    admin TheAdmin[2];
+    admin TheAdmin[adminMember];
     loadDataAdmin(TheAdmin);
     loginForAdmin(TheAdmin);
     /*adminMenu();

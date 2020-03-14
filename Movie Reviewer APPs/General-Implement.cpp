@@ -72,7 +72,7 @@ void insertPasword(string &password) {
     }
     password = pass;
 }
-void loginForAdmin(admin theAdmin[2]) {
+void loginForAdmin(admin theAdmin[adminMember]) {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
     cout << "                        Admin Login                         *\n";
@@ -89,9 +89,11 @@ void loginForAdmin(admin theAdmin[2]) {
     } else {
         cout << "The username and/or password you specified are not correct.\n";
     }
+    cout << "\nEnter any Key to continue.\n";
+    getch();
 
 }
-bool validasiAdmin(admin theAdmin[2], string username, string password) {
+bool validasiAdmin(admin theAdmin[adminMember], string username, string password) {
     bool check = false;
     for (int i = 0; i < 2; i++) {
         if (username == theAdmin[i].username && password == theAdmin[i].password) {
@@ -100,7 +102,7 @@ bool validasiAdmin(admin theAdmin[2], string username, string password) {
     }
     return check;
 }
-void loadDataAdmin(admin theAdmin[2]) {
+void loadDataAdmin(admin theAdmin[adminMember]) {
     theAdmin[0].username = "BagasTri07";
     theAdmin[0].password = "sayaAdmin";
     theAdmin[1].username = "MaulanaFC";

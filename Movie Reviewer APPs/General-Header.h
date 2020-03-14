@@ -16,14 +16,16 @@ struct admin {
     string password;
 };
 
+const int adminMember = 2;
+
 void loginMenu();
 void adminMenu();
 void userMenu();
 void greetingUser(string username);
 void greetingAdmin(string adminName);
 void insertPasword(string &password);
-void loginForAdmin(admin theAdmin[2]);
-bool validasiAdmin(admin theAdmin[2], string username, string password);
-void loadDataAdmin(admin theAdmin[2]);
+void loginForAdmin(admin theAdmin[adminMember]);
+bool validasiAdmin(admin theAdmin[adminMember], string username, string password);
+void loadDataAdmin(admin theAdmin[adminMember]);
 
 #endif // GENERAL-HEADER_H_INCLUDED
