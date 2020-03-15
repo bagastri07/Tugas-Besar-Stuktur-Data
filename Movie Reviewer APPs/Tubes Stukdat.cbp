@@ -36,6 +36,8 @@
 		<Unit filename="General-Implement.cpp" />
 		<Unit filename="List-Parent-Movie.cpp" />
 		<Unit filename="List-Parent-Movie.h" />
+		<Unit filename="List-Relation.cpp" />
+		<Unit filename="List-Relation.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

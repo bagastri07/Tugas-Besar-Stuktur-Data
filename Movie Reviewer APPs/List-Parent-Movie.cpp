@@ -5,6 +5,9 @@ void createListMovie(List_Movie &L) {
     First(L) = NULL;
     Last(L) = NULL;
 }
+bool isEmptyListMovie(List_Movie &L) {
+    return First(L) == NULL && Last(L) == NULL;
+}
 address_Movie createElmMovie(string judul, string tahun) {
     address_Movie P;
     P = new elmList_Movie;
@@ -28,7 +31,7 @@ void viewListMovie(List_Movie L) {
     }
 }
 void insertLastMovie(List_Movie &L, address_Movie P){
-    if (First(L) == NULL) {
+    if (isEmptyListMovie(L)) {
         First(L) = P;
         Last(L) = P;
     } else {
@@ -37,7 +40,7 @@ void insertLastMovie(List_Movie &L, address_Movie P){
     }
 }
 void deleteFirstMovie(List_Movie &L, address_Movie &P){
-    if (Next(First(L)) == NULL) {
+    if (isEmptyListMovie(L)) {
         P = First(L);
         First(L) = NULL;
         Last(L) = NULL;
@@ -82,21 +85,25 @@ address_Movie searchElmMovie(List_Movie L, string judul) {
     }
 }
 void deleteElmMovie(List_Movie &L, string judul) {
-    address_Movie P = searchElmMovie(L,judul);
-    if (P != NULL) {
-        if (P == First(L)) {
-            deleteFirstMovie(L,P);
-        } else if (P == Last(L)) {
-            deleteLastMovie(L,P);
-        } else {
-            address_Movie A = First(L);
-            while (Next(A) != P) {
+    if (isEmptyListMovie(L)) {
+        address_Movie P = searchElmMovie(L,judul);
+        if (P != NULL) {
+            if (P == First(L)) {
+                deleteFirstMovie(L,P);
+            } else if (P == Last(L)) {
+                deleteLastMovie(L,P);
+            } else {
+                address_Movie A = First(L);
+                while (Next(A) != P) {
                 A = Next(A);
+                }
+                deleteAfterMovie(A,P);
             }
-            deleteAfterMovie(A,P);
+        } else {
+        cout << "Judul Film tidak ditemukan" << endl;
         }
     } else {
-        cout<<"Judul Film tidak ditemukan"<<endl;
+        cout << "List Movie Kosong" << endl;
     }
 }
 void loadDataMovies(List_Movie &L) {
@@ -111,5 +118,7 @@ void loadDataMovies(List_Movie &L) {
     A = createElmMovie("Spider Man : Far From Home","2019");
     insertLastMovie(L,A);
     A = createElmMovie("Joker","2019");
+    insertLastMovie(L,A);
+    A = createElmMovie("Ratu Ilmu Hitam","2019");
     insertLastMovie(L,A);
 }

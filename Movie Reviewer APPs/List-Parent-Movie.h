@@ -3,24 +3,8 @@
 
 #include "General-Header.h"
 
-struct movie {
-    string Judul, Tahun, Status;
-};
-
-typedef movie infotype;
-typedef struct elmList_Movie *address_Movie;
-
-struct elmList_Movie {;
-    infotype Info;
-    address_Movie Next;
-};
-
-struct List_Movie {
-    address_Movie First;
-    address_Movie Last;
-};
-
 void createListMovie(List_Movie &L);
+bool isEmptyListMovie(List_Movie &L);
 address_Movie createElmMovie(string judul, string tahun);
 void viewListMovie(List_Movie L);
 void insertLastMovie(List_Movie &L, address_Movie P);
