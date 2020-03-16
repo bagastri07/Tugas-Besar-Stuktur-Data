@@ -21,5 +21,16 @@ void insertLastRelation(List_Relation &L, address_Relation P) {
 void deleteFirstRelation(List_Relation &L, address_Relation &P);
 void deleteLastRelation(List_Relation &L, address_Relation &P);
 void deleteAfterRelation(address_Relation Prec, address_Relation &P);
-address_Relation searchElmRelation(List_Relation L, string title);
+address_Relation searchElmRelation(List_Relation L, string title) {
+    address_Relation A  = First(L);
+    bool Found = false;
+    do {
+        if (title == Info(A).title) {
+            Found = true;
+        } else {
+            A = Next(A);
+        }
+    } while (A != First(L) && !Found);
+    return A;
+}
 void deleteElmRelation(List_Relation L, string title);
