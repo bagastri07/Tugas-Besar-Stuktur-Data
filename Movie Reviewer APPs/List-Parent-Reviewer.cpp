@@ -47,6 +47,26 @@ void insertLastUser(List_User &L, address_User P){
     }
 }
 
+void insertFirstUser(List_User &L, address_User P){
+    if (isEmptyListUser(L)){
+        First(L) = P;
+        Last(L) = P;
+    }else{
+        Next(P) = First(L);
+        First(L) = P;
+    }
+}
+
+void insertAfterUser(address_User Prec, address_User &P){
+    if (Prec != NULL){
+        Next(P) = Next(Prec);
+        Next(Prec) = P;
+    }else{
+        cout<<"Insert After Gagal"<<endl;
+        cout<<endl;
+    }
+}
+
 void deleteFirstUser(List_User &L, address_User &P){
     if (isEmptyListUser(L)){
         P = First(L);
@@ -121,15 +141,17 @@ void deleteElmUser(List_User &L, string username){
 
 void loadDataUsers(List_User &L){
     createListUser(L);
-    address_User x;
+    address_User x,p;
     x = createElmUser("Alex","123456",18);
     insertLastUser(L,x);
     x = createElmUser("Bobi","123456",17);
-    insertLastUser(L,x);
+    insertFirstUser(L,x);
     x = createElmUser("Charles","123456",19);
-    insertLastUser(L,x);
+    insertFirstUser(L,x);
     x = createElmUser("Dion","123456",20);
     insertLastUser(L,x);
+    //Insert setelah Bobi
+    p = searchElmUser(L,"Bobi");
     x = createElmUser("Eka","123456",18);
-    insertLastUser(L,x);
+    insertAfterUser(p,x);
 }
