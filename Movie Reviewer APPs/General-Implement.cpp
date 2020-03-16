@@ -109,6 +109,44 @@ void loadDataAdmin(admin theAdmin[adminMember]) {
     theAdmin[1].password = "sayaJuga";
 }
 
-void loginForUser(user theUser[userMember]);
-bool validasiUser(admin theUser[userMember], string username, string password);
-void loadDataUser(admin theUser[userMember]);
+void loginForUser(user theUser[userMember]){
+    cout << "*************************************************************\n";
+    cout << "*                   Movie Reviewer APPs                     *\n";
+    cout << "                        User Login                         *\n";
+    cout << "*************************************************************\n";
+    string username, password;
+
+    cout << "Username : ";
+    cin >> username;
+    cout << "Password : ";
+    insertPasword(password);
+    cout << endl;
+    if (validasiUser(theUser, username, password)) {
+        greetingUser(username);
+    } else {
+        cout << "The username and/or password you specified are not correct.\n";
+    }
+    cout << "\nEnter any Key to continue.\n";
+    getch();
+}
+
+bool validasiUser(user theUser[userMember], string username, string password){
+    bool check = false;
+    for (int i = 0; i < 4; i++) {
+        if (username == theUser[i].username && password == theUser[i].password) {
+            check = true;
+        }
+    }
+    return check;
+}
+
+void loadDataUser(user theUser[userMember]){
+    theUser[0].username = "Alex";
+    theUser[0].password = "sayaAlex";
+    theUser[1].username = "Bobi";
+    theUser[1].password = "sayaBobi";
+    theUser[2].username = "Charles";
+    theUser[2].password = "sayaCharles";
+    theUser[3].username = "Dion";
+    theUser[3].password = "sayaDion";
+}
