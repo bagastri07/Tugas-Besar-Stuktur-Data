@@ -20,6 +20,7 @@ struct admin {
 };
 
 const int adminMember = 2;
+const int userMember = 10;
 
 // Struct for ALL of the lists.
 struct movie {
@@ -80,5 +81,8 @@ void insertPasword(string &password);
 void loginForAdmin(admin theAdmin[adminMember]);
 bool validasiAdmin(admin theAdmin[adminMember], string username, string password);
 void loadDataAdmin(admin theAdmin[adminMember]);
+void loginForUser(user theUser[userMember]);
+bool validasiUser(admin theUser[userMember], string username, string password);
+void loadDataUser(admin theUser[userMember]);
 
 #endif // GENERAL-HEADER_H_INCLUDED

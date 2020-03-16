@@ -108,3 +108,7 @@ void loadDataAdmin(admin theAdmin[adminMember]) {
     theAdmin[1].username = "MaulanaFC";
     theAdmin[1].password = "sayaJuga";
 }
+
+void loginForUser(user theUser[userMember]);
+bool validasiUser(admin theUser[userMember], string username, string password);
+void loadDataUser(admin theUser[userMember]);
