@@ -13,11 +13,17 @@ int main()
     List_Movie L;
     loadDataMovies(L);
     viewListMovie(L);
-    */
+
     List_User A;
     loadDataUsers(A);
     //viewListUser(A);
     viewListUser(A);
+    */
+
+    user TheUser[userMember];
+    loadDataUser(TheUser);
+    loginForUser(TheUser);
+    userMenu();
 
 
     return 0;
