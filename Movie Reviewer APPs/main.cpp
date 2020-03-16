@@ -16,6 +16,7 @@ int main()
     */
     List_User A;
     loadDataUsers(A);
+    //viewListUser(A);
     viewListUser(A);
 
 
