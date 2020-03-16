@@ -13,7 +13,7 @@ bool isEmptyListUser(List_User &L){
     {
         return false;
     }
-    
+
 }
 
 address_User createElmUser(string username, string password, int umur){
@@ -125,11 +125,11 @@ void loadDataUsers(List_User &L){
     x = createElmUser("Alex","123456",18);
     insertLastUser(L,x);
     x = createElmUser("Bobi","123456",17);
-    insertLastUser(L,x);    
+    insertLastUser(L,x);
     x = createElmUser("Charles","123456",19);
-    insertLastUser(L,x); 
+    insertLastUser(L,x);
     x = createElmUser("Dion","123456",20);
-    insertLastUser(L,x); 
+    insertLastUser(L,x);
     x = createElmUser("Eka","123456",18);
-    insertLastUser(L,x); 
+    insertLastUser(L,x);
 }

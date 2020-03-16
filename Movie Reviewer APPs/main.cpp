@@ -1,6 +1,6 @@
 #include "General-Header.h"
-#include "List-Parent-Movie.h"
 #include "List-Parent-Reviewer.h"
+#include "List-Parent-Movie.h"
 #include "List-Relation.h"
 
 int main()
@@ -14,9 +14,10 @@ int main()
     loadDataMovies(L);
     viewListMovie(L);
     */
-    List_User L;
-    loadDataUsers(L);
-    viewListUser(L);
+    List_User A;
+    loadDataUsers(A);
+    viewListUser(A);
+
 
     return 0;
 }

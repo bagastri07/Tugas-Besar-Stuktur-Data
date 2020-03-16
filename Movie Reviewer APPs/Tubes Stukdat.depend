@@ -25,14 +25,14 @@
 	<conio.h>
 	<ctime>
 
-1584289800 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-movie.h
-	"General-Header.h"
+1584334972 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-movie.h
 
 1584214328 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-implement.cpp
 	"General-Header.h"
 
-1584288747 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\main.cpp
+1584335161 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\main.cpp
 	"General-Header.h"
+	"List-Parent-Reviewer.h"
 	"List-Parent-Movie.h"
 	"List-Relation.h"
 
@@ -72,4 +72,14 @@
 
 1584331619 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.h
 	"General-Header.h"
+
+1584335099 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.cpp
+	"General-Header.h"
+	"List-Parent-Reviewer.h"
+
+1584334958 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.h
+
+1584292495 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-relation.cpp
+	"General-Header.h"
+	"List-Relation.h"
 

@@ -1,6 +1,5 @@
 #ifndef LIST-PARENT-REVIEWER_H_INCLUDED
 #define LIST-PARENT-REVIEWER_H_INCLUDED
-#include "General-Header.h"
 
 void createListUser(List_User &L);
 bool isEmptyListUser(List_User &L);
