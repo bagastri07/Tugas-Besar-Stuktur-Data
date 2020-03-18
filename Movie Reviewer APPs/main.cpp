@@ -10,7 +10,7 @@ int main()
     loginForAdmin(TheAdmin);
     adminMenu(); */
 
-    List_Movie A;
+    List_Movie A; // List Parent 1
     loadDataMovies(A); // Sudah terkandung CreateList & InsertLast
     viewListMovie(A);
     deleteElmMovie(A,"Gundala"); //DeleteFirst
@@ -19,13 +19,18 @@ int main()
     viewListMovie(A);
 
 
-    List_User B;
+    List_User B; // List Parent 2
     loadDataUsers(B); // Sudah terkandung CreateList, InsertFirst, InsertLast, dan InsertAfter
     viewListUser(B);
     deleteElmUser(B,"AmandaZahra"); //DeleteFirst;
     deleteElmUser(B,"ZicoArief"); //DeleteLast
     deleteElmUser(B,"DesyAnwar"); //DeleteAfter
     viewListUser(B);
+
+    List_Relation C; // List Relasi
+    loadDataRelation(C,A,B);
+    viewListRelation(C);
+
 
     //user TheUser[userMember];
     //loginForUser(TheUser);

@@ -85,5 +85,6 @@ void loadDataAdmin(admin theAdmin[adminMember]);
 void loginForUser(user theUser[userMember]);
 bool validasiUser(user theUser[userMember], string username, string password);
 void loadDataUser(user theUser[userMember]);
+string getDateAndTime();
 
 #endif // GENERAL-HEADER_H_INCLUDED
