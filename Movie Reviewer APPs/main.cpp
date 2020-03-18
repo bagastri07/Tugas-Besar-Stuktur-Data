@@ -11,11 +11,20 @@ int main()
     adminMenu(); */
 
     List_Movie A;
-    loadDataMovies(A);
+    loadDataMovies(A); // Sudah terkandung CreateList & InsertLast
+    viewListMovie(A);
+    deleteElmMovie(A,"Gundala"); //DeleteFirst
+    deleteElmMovie(A,"Ratu Ilmu Hitam"); //DeleteLast
+    deleteElmMovie(A,"Joker"); //DeleteAfter
     viewListMovie(A);
 
+
     List_User B;
-    loadDataUsers(B);
+    loadDataUsers(B); // Sudah terkandung CreateList, InsertFirst, InsertLast, dan InsertAfter
+    viewListUser(B);
+    deleteElmUser(B,"AmandaZahra"); //DeleteFirst;
+    deleteElmUser(B,"ZicoArief"); //DeleteLast
+    deleteElmUser(B,"DesyAnwar"); //DeleteAfter
     viewListUser(B);
 
     //user TheUser[userMember];

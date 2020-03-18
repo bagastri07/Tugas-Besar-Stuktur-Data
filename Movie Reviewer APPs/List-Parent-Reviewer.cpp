@@ -136,7 +136,7 @@ address_User searchElmUser(List_User L, string username){
 }
 
 void deleteElmUser(List_User &L, string username){
-    if (isEmptyListUser(L)) {
+    if (!isEmptyListUser(L)) {
         address_User P = searchElmUser(L,username);
         if (P != NULL) {
             if (P == First(L)) {

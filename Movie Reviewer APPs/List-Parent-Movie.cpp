@@ -85,7 +85,7 @@ address_Movie searchElmMovie(List_Movie L, string judul) {
     }
 }
 void deleteElmMovie(List_Movie &L, string judul) {
-    if (isEmptyListMovie(L)) {
+    if (!isEmptyListMovie(L)) {
         address_Movie P = searchElmMovie(L,judul);
         if (P != NULL) {
             if (P == First(L)) {
