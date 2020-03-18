@@ -16,12 +16,12 @@ bool isEmptyListUser(List_User &L){
 
 }
 
-address_User createElmUser(string username, string password, int umur){
+address_User createElmUser(infotype_User newData){
     address_User P;
     P = new elmlist_User;
-    Info(P).username = username;
-    Info(P).password = password;
-    Info(P).umur = umur;
+    Info(P).username = newData.username;
+    Info(P).password = newData.password;
+    Info(P).umur = newData.umur;
     Next(P) = NULL;
     return P;
 }
@@ -29,6 +29,7 @@ address_User createElmUser(string username, string password, int umur){
 void viewListUser(List_User L){
     address_User x;
     x = First(L);
+    cout<<"===>List User<===="<<endl;
     while (x != NULL){
         cout<<"Username : "<<Info(x).username<<endl;
         cout<<"Umur     : "<<Info(x).umur<<endl;
@@ -62,7 +63,7 @@ void insertAfterUser(address_User Prec, address_User &P){
         Next(P) = Next(Prec);
         Next(Prec) = P;
     }else{
-        cout<<"Insert After Gagal"<<endl;
+        cout<<"Your Insert Failed"<<endl;
         cout<<endl;
     }
 }
@@ -76,6 +77,24 @@ void deleteFirstUser(List_User &L, address_User &P){
         P = First(L);
         First(L) = Next(P);
         Next(P) = NULL;
+    }
+}
+void InsertElmUser(List_User &L, infotype_User newData) {
+    address_User P = createElmUser(newData);
+    if (!isEmptyListUser(L)) {
+        if (newData.username <= Info(First(L)).username) {
+            insertFirstUser(L,P);
+        } else if (newData.username >= Info(Last(L)).username) {
+            insertLastUser(L,P);
+        } else {
+            address_User A = First(L);
+            while (newData.username > Info(Next(A)).username) {
+                A = Next(A);
+            }
+            insertAfterUser(A,P);
+        }
+    } else {
+        insertFirstUser(L,P);
     }
 }
 
@@ -139,19 +158,30 @@ void deleteElmUser(List_User &L, string username){
     }
 }
 
+bool duplicateUsernameChecker(List_User L, string usernm) {
+    address_User A = First(L);
+    bool duplicate = false;
+    while (A != NULL && !duplicate) {
+        if (Info(A).username == usernm) {
+            duplicate = true;
+        } else {
+            A = Next(A);
+        }
+    }
+    return duplicate;
+}
+
 void loadDataUsers(List_User &L){
     createListUser(L);
-    address_User x,p;
-    x = createElmUser("Alex","123456",18);
-    insertLastUser(L,x);
-    x = createElmUser("Bobi","123456",17);
-    insertFirstUser(L,x);
-    x = createElmUser("Charles","123456",19);
-    insertFirstUser(L,x);
-    x = createElmUser("Dion","123456",20);
-    insertLastUser(L,x);
-    //Insert setelah Bobi
-    p = searchElmUser(L,"Bobi");
-    x = createElmUser("Eka","123456",18);
-    insertAfterUser(p,x);
+    infotype_User newData;
+    newData.username = "Reynaldo32", newData.password  ="thisispassword123", newData.umur = 19;
+    InsertElmUser(L,newData);
+    newData.username = "AmandaZahra", newData.password  ="thisispassword123", newData.umur = 29;
+    InsertElmUser(L,newData);
+    newData.username = "ZicoArief", newData.password  ="thisispassword123", newData.umur = 33;
+    InsertElmUser(L,newData);
+    newData.username = "BreadSalad", newData.password  ="thisispassword123", newData.umur = 13;
+    InsertElmUser(L,newData);
+    newData.username = "DesyAnwar", newData.password  ="thisispassword123", newData.umur = 33;
+    InsertElmUser(L,newData);
 }

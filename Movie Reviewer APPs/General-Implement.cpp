@@ -139,7 +139,7 @@ bool validasiUser(user theUser[userMember], string username, string password){
     }
     return check;
 }
-
+/*
 void loadDataUser(user theUser[userMember]){
     theUser[0].username = "Alex";
     theUser[0].password = "sayaAlex";
@@ -149,4 +149,4 @@ void loadDataUser(user theUser[userMember]){
     theUser[2].password = "sayaCharles";
     theUser[3].username = "Dion";
     theUser[3].password = "sayaDion";
-}
+}*/

@@ -1,5 +1,5 @@
-#ifndef LIST-PARENT-MOVIE_H_INCLUDED
-#define LIST-PARENT-MOVIE_H_INCLUDED
+//#ifndef LIST-PARENT-MOVIE_H_INCLUDED
+//#define LIST-PARENT-MOVIE_H_INCLUDED
 
 //#include "General-Header.h"
 
@@ -15,4 +15,4 @@ address_Movie searchElmMovie(List_Movie L, string judul);
 void deleteElmMovie(List_Movie &L, string judul);
 void loadDataMovies(List_Movie &L);
 
-#endif // LIST-PARENT-MOVIE_H_INCLUDED
+//#endif // LIST-PARENT-MOVIE_H_INCLUDED

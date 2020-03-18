@@ -1,29 +1,26 @@
 #include "General-Header.h"
-#include "List-Parent-Reviewer.h"
 #include "List-Parent-Movie.h"
 #include "List-Relation.h"
+#include "List-Parent-Reviewer.h"
 
 int main()
 {
     /*admin TheAdmin[adminMember];
     loadDataAdmin(TheAdmin);
     loginForAdmin(TheAdmin);
-    adminMenu();
+    adminMenu(); */
 
-    List_Movie L;
-    loadDataMovies(L);
-    viewListMovie(L);
+    List_Movie A;
+    loadDataMovies(A);
+    viewListMovie(A);
 
-    List_User A;
-    loadDataUsers(A);
-    //viewListUser(A);
-    viewListUser(A);
-    */
+    List_User B;
+    loadDataUsers(B);
+    viewListUser(B);
 
-    user TheUser[userMember];
-    loadDataUser(TheUser);
-    loginForUser(TheUser);
-    userMenu();
+    //user TheUser[userMember];
+    //loginForUser(TheUser);
+    //userMenu();
 
 
     return 0;

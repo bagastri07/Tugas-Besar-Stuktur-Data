@@ -12,6 +12,7 @@
 #define First(L) L.First
 #define Last(L) L.Last
 
+
 using namespace std;
 
 struct admin {
