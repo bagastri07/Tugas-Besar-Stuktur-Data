@@ -28,7 +28,7 @@ int main()
     viewListUser(B);
 
     List_Relation C; // List Relasi
-    loadDataRelation(C,A,B);
+    loadDataRelation(C,A,B); // sudah terkandung createList dan insertFirst sesuai dengan spesifikasi soal
     viewListRelation(C);
 
 
