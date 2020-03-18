@@ -28,7 +28,7 @@ struct movie {
     string Judul, Tahun, Status;
 };
 struct review {
-    string title, comment, date;
+    string comment, date;
 };
 struct user {
     string username, password;

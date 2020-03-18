@@ -15,7 +15,7 @@ address_Relation createElmRelation(List_Movie ListMovie, List_User ListUser,stri
     address_Relation P = new elmList_Relation;
 
     if (Mov != NULL && User != NULL) {
-        Info(P).title = titleMovie;
+        //Info(P).title = titleMovie;
         Info(P).comment = review;
         Info(P).date = date;
         Movie(P) = Mov;
@@ -60,7 +60,8 @@ address_Relation searchElmRelation(List_Relation L, string title) {
     address_Relation A  = First(L);
     bool Found = false;
     do {
-        if (title == Info(A).title) {
+        address_Movie movie = Movie(A);
+        if (title == Info(movie).Judul) {
             Found = true;
         } else {
             A = Next(A);
@@ -76,9 +77,10 @@ void viewListRelation(List_Relation L) {
         do {
             address_Movie B = Movie(A);
             address_User C = User(A);
-            cout << "Title : " <<Info(B).Judul << endl;
-            cout << "User : " << Info(C).username << endl;
-            cout << "Review : " << Info(A).comment << endl;
+            cout << "Title    : " <<Info(B).Judul << endl;
+            cout << "User     : " << Info(C).username << endl;
+            cout << "Review   : " << Info(A).comment << endl;
+            cout << "Time     : " << Info(A).date << endl;
             cout << endl;
             A = Next(A);
         } while (A != First(L));
@@ -108,5 +110,5 @@ void loadDataRelation(List_Relation &L, List_Movie ListMovie, List_User ListUser
     insertElmRelation(L,ListMovie,ListUser, "Hit & Run", "Reynaldo32", "Cukup bagus tapi grafiknya kurang");
     insertElmRelation(L,ListMovie,ListUser, "Hit & Run", "Reynaldo32", "Saya tidak suka"); // coba jika dipaksakan review film yang sama lebih dari 1 kali
     insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "Reynaldo32", "Saya suka alur cerita yang luar biasa"); //user yang sama input review film yang berbeda
-    insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "BreadSalad", "Saya suka alur cerita yang luar biasa"); //user yang berbeda input film yang sama
+    insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "BreadSalad", "Romantis banget pengen nikah deh:("); //user yang berbeda input film yang sama
 }

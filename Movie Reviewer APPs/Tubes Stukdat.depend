@@ -16,11 +16,11 @@
 1584119646 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\general-implement.cpp
 	"General-Header.h"
 
-1584531112 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-movie.cpp
+1584551569 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-movie.cpp
 	"General-Header.h"
 	"List-Parent-Movie.h"
 
-1584546584 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-header.h
+1584551575 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-header.h
 	<iostream>
 	<conio.h>
 	<ctime>
@@ -30,7 +30,7 @@
 1584546567 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\general-implement.cpp
 	"General-Header.h"
 
-1584548341 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\main.cpp
+1584551443 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\main.cpp
 	"General-Header.h"
 	"List-Parent-Movie.h"
 	"List-Relation.h"
@@ -78,7 +78,7 @@
 
 1584531306 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.h
 
-1584549839 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-relation.cpp
+1584551393 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-relation.cpp
 	"General-Header.h"
 	"List-Relation.h"
 	"List-Parent-Movie.h"

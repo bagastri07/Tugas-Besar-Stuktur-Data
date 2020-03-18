@@ -24,8 +24,8 @@ void viewListMovie(List_Movie L) {
     while (A != NULL) {
         //Sementara tidak menggunakan ID
         //cout<<"ID : "<<Info(A).ID<<endl;
-        cout<<"Judul : "<<Info(A).Judul<<endl;
-        cout<<"Tahun : "<<Info(A).Tahun<<endl;
+        cout<<"Title    : "<<Info(A).Judul<<endl;
+        cout<<"Year     : "<<Info(A).Tahun<<endl;
         cout<<endl;
         A = Next(A);
     }

@@ -32,7 +32,7 @@ void viewListUser(List_User L){
     cout<<"===>List User<===="<<endl;
     while (x != NULL){
         cout<<"Username : "<<Info(x).username<<endl;
-        cout<<"Umur     : "<<Info(x).umur<<endl;
+        cout<<"Age      : "<<Info(x).umur<<endl;
         cout<<endl;
         x = Next(x);
     }
