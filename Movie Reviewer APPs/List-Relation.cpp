@@ -77,8 +77,10 @@ void viewListRelation(List_Relation L) {
         do {
             address_Movie B = Movie(A);
             address_User C = User(A);
-            cout << "Title    : " <<Info(B).Judul << endl;
+            cout << "Title    : " << Info(B).Judul << endl;
+            cout << "Year     : " << Info(B).Tahun << endl;
             cout << "User     : " << Info(C).username << endl;
+            cout << "Age      : " << Info(C).umur << endl;
             cout << "Review   : " << Info(A).comment << endl;
             cout << "Time     : " << Info(A).date << endl;
             cout << endl;
