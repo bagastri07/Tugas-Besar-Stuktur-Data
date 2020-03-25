@@ -9,18 +9,11 @@
 >- Rita Rismala, S.T., M.T. <br>
 
 ### Description
-> Tugas Besar Struktur Data. Dalam topik Tugas Besar kami akan membuat Movie Reviewer APPs yang memeliki Spesifikasi Umum, seperti : <br><br>
-**Main Menu** <br>
-  >- Log In Admin
-  >- Log In User 
-  >- Register New User
-<br>**Admin Menu**<br>
-  >- Insert New Movie 
-  >- View All Movie 
+> Tugas Besar Struktur Data. Dalam topik Tugas Besar kami akan membuat sebuah program Movie Reviewer APPs.  <br><br>
 
 ### List initialize
->- List Parent 1 = Movie
->- List Parent 2 = Reviewer
+>- List Parent 1 = Movies
+>- List Parent 2 = Reviewers
 >- List Relasi = Ulasan
 
 ### End of README.md
