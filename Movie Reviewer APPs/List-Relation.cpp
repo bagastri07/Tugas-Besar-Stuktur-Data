@@ -57,26 +57,30 @@ void insertElmRelation(List_Relation &L, List_Movie ListMovie, List_User ListUse
 void deleteFirstRelation(List_Relation &L, address_Relation &P){
     if(!isEmptyListRelation(L)){
         P = First(L);
+        Next(Prev(P)) = Next(P);
+        Prev(Next(P)) = Prev(P);
         First(L) = Next(P);
         Next(P) = NULL;
+        Prev(P) = NULL;
     }
 }
 
 void deleteLastRelation(List_Relation &L, address_Relation &P){
     if(!isEmptyListRelation(L)){
-        adress_Relation Q = First(L);
-        while(Next(Next(Q)) != NULL){
-            Q = Next(Q);
-        }
-        Next(Q) = P;
+        P = Prev(First(L));
+        Prev(First(L)) = Prev(P);
+        Next(Prev(P)) = First(L);
         Next(P) = NULL;
+        Prev(P) = NULL;
     }
 }
 
 void deleteAfterRelation(address_Relation Prec, address_Relation &P){
     P = Next(Prec);
     Next(Prec) = Next(P);
+    Prev(Next(P)) = Prec;
     Next(P) = NULL;
+    Prev(P) = NULL;
 }
 
 address_Relation searchElmRelation(List_Relation L, string title) {
