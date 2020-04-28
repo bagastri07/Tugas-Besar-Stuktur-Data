@@ -69,7 +69,7 @@ void deleteLastRelation(List_Relation &L, address_Relation &P){
             Q = Next(Q);
         }
         Next(Q) = P;
-        Next(Q) = NULL;
+        Next(P) = NULL;
     }
 }
 
