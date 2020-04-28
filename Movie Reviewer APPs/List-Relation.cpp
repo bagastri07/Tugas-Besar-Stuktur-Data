@@ -53,9 +53,32 @@ void insertElmRelation(List_Relation &L, List_Movie ListMovie, List_User ListUse
         }
     }
 }
-void deleteFirstRelation(List_Relation &L, address_Relation &P);
-void deleteLastRelation(List_Relation &L, address_Relation &P);
-void deleteAfterRelation(address_Relation Prec, address_Relation &P);
+
+void deleteFirstRelation(List_Relation &L, address_Relation &P){
+    if(!isEmptyListRelation(L)){
+        P = First(L);
+        First(L) = Next(P);
+        Next(P) = NULL;
+    }
+}
+
+void deleteLastRelation(List_Relation &L, address_Relation &P){
+    if(!isEmptyListRelation(L)){
+        adress_Relation Q = First(L);
+        while(Next(Next(Q)) != NULL){
+            Q = Next(Q);
+        }
+        Next(Q) = P;
+        Next(Q) = NULL;
+    }
+}
+
+void deleteAfterRelation(address_Relation Prec, address_Relation &P){
+    P = Next(Prec);
+    Next(Prec) = Next(P);
+    Next(P) = NULL;
+}
+
 address_Relation searchElmRelation(List_Relation L, string title) {
     address_Relation A  = First(L);
     bool Found = false;
