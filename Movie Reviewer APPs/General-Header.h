@@ -79,12 +79,14 @@ void userMenu();
 void greetingUser(string username);
 void greetingAdmin(string adminName);
 void insertPasword(string &password);
-void loginForAdmin(admin theAdmin[adminMember]);
+void loginForAdmin(admin theAdmin[adminMember], string accessStatus);
 bool validasiAdmin(admin theAdmin[adminMember], string username, string password);
 void loadDataAdmin(admin theAdmin[adminMember]);
 void loginForUser(user theUser[userMember]);
 bool validasiUser(user theUser[userMember], string username, string password);
-void loadDataUser(user theUser[userMember]);
+//void loadDataUser(user theUser[userMember]);
 string getDateAndTime();
+bool validasiChoice(int input,int Min, int Max);
+void inputChoice(int &choice, int Min, int Max);
 
 #endif // GENERAL-HEADER_H_INCLUDED

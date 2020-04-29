@@ -56,12 +56,17 @@ void insertElmRelation(List_Relation &L, List_Movie ListMovie, List_User ListUse
 
 void deleteFirstRelation(List_Relation &L, address_Relation &P){
     if(!isEmptyListRelation(L)){
-        P = First(L);
-        Next(Prev(P)) = Next(P);
-        Prev(Next(P)) = Prev(P);
-        First(L) = Next(P);
-        Next(P) = NULL;
-        Prev(P) = NULL;
+        if (First(L) == Next(First(L))) {
+            P = First(L);
+            First(L) = NULL;
+        } else {
+            P = First(L);
+            First(L) = Next(P);
+            Next(Prev(P)) = Next(P);
+            Prev(Next(P)) = Prev(P);
+            Next(P) = NULL;
+            Prev(P) = NULL;
+        }
     }
 }
 
@@ -83,20 +88,40 @@ void deleteAfterRelation(address_Relation Prec, address_Relation &P){
     Prev(P) = NULL;
 }
 
-address_Relation searchElmRelation(List_Relation L, string title) {
+address_Relation searchElmRelation(List_Relation L, string title, string username) {
     address_Relation A  = First(L);
     bool Found = false;
     do {
-        address_Movie movie = Movie(A);
-        if (title == Info(movie).Judul) {
+        //address_Movie movie = Movie(A);
+        if (Info(Movie(A)).Judul == title && Info(User(A)).username == username) {
             Found = true;
         } else {
             A = Next(A);
         }
     } while (A != First(L) && !Found);
-    return A;
+    if (Found) {
+        return A;
+    } else {
+        return NULL;
+    }
 }
-void deleteElmRelation(List_Relation L, string title);
+void deleteElmRelation(List_Relation &L, string title, string username) {
+    if(!isEmptyListRelation(L)) {
+        address_Relation P = searchElmRelation(L, title, username);
+        if (P != NULL) {
+            if (P == First(L)) {
+                deleteFirstRelation(L,P);
+            } else if (P == Prev(First(L))) {
+                deleteLastRelation(L,P);
+            } else {
+                address_Relation Prec = Prev(P);
+                deleteAfterRelation(Prec, P);
+            }
+        } else {
+            cout << "The film is not found" << endl;
+        }
+    }
+}
 void viewListRelation(List_Relation L) {
     address_Relation A = First(L);
     cout << "==>List Relasi<===" << endl;

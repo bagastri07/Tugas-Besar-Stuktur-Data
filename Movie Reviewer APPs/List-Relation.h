@@ -10,8 +10,8 @@ void insertElmRelation(List_Relation &L, List_Movie ListMovie, List_User ListUse
 void deleteFirstRelation(List_Relation &L, address_Relation &P);
 void deleteLastRelation(List_Relation &L, address_Relation &P);
 void deleteAfterRelation(address_Relation Prec, address_Relation &P);
-address_Relation searchElmRelation(List_Relation L, string title);
-void deleteElmRelation(List_Relation L, string title);
+address_Relation searchElmRelation(List_Relation L, string title, string username);
+void deleteElmRelation(List_Relation &L, string title, string username);
 void viewListRelation(List_Relation L);
 bool duplicateUsernameAtRelation (List_Relation L, string username, string title );
 void loadDataRelation(List_Relation &L, List_Movie ListMovie, List_User ListUser);

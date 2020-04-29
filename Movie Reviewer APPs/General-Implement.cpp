@@ -72,7 +72,7 @@ void insertPasword(string &password) {
     }
     password = pass;
 }
-void loginForAdmin(admin theAdmin[adminMember]) {
+void loginForAdmin(admin theAdmin[adminMember], string &accessStatus) {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
     cout << "                        Admin Login                         *\n";
@@ -148,6 +148,20 @@ string getDateAndTime() {
     return dt;
 
 }
+bool validasiChoice(int input,int Min, int Max) {
+    return input >= Min && input <= Max;
+}
+void inputChoice(int &choice, int Min, int Max) {
+    int i = 4;
+    do {
+        if (i < 4) {
+            cout << "Miss the choice, try again ... (" << i << ") : ";
+        }
+        cin >> choice;
+        i--;
+    } while (!validasiChoice(choice, Min, Max) && i != -1);
+}
+
 /*
 void loadDataUser(user theUser[userMember]){
     theUser[0].username = "Alex";
