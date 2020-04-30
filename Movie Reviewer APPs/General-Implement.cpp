@@ -23,10 +23,9 @@ void adminMenu() {
     cout << " |5|. View Data Reviewer                                    *\n";
     cout << " |6|. Delete Reviewer (user)                                *\n";
     cout << " |7|. Statitic of Movies                                    *\n";
-    cout << " |8|. Statitic of Movies                                    *\n";
-    cout << " |9|.Exit.                                                  *\n";
+    cout << " |8|.Exit.                                                  *\n";
     cout << "*************************************************************\n";
-    cout << " Enter your choice and press enter: ";
+    cout << " Enter your choice : ";
 }
 void userMenu() {
     cout << "*************************************************************\n";
@@ -39,7 +38,7 @@ void userMenu() {
     cout << " |4|. My Info                                               *\n";
     cout << " |5|.Exit.                                                  *\n";
     cout << "*************************************************************\n";
-    cout << " Enter your choice and press enter: ";
+    cout << " Enter your choice : ";
 }
 void greetingUser(string username) {
     cout << "Welcome Back!!!\n";
@@ -70,9 +69,11 @@ void insertPasword(string &password) {
             Enter = true;
         }
     }
-    password = pass;
+    string Temp(pass);
+    password = Temp;
+   // cout << password;
 }
-void loginForAdmin(admin theAdmin[adminMember], string &accessStatus) {
+void loginForAdmin(admin theAdmin[adminMember], string &access) {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
     cout << "                        Admin Login                         *\n";
@@ -86,8 +87,10 @@ void loginForAdmin(admin theAdmin[adminMember], string &accessStatus) {
     cout << endl;
     if (validasiAdmin(theAdmin, username, password)) {
         greetingAdmin(username);
+        access = "Granted";
     } else {
         cout << "The username and/or password you specified are not correct.\n";
+        access = "Denied";
     }
     cout << "\nEnter any Key to continue.\n";
     getch();
@@ -95,7 +98,7 @@ void loginForAdmin(admin theAdmin[adminMember], string &accessStatus) {
 }
 bool validasiAdmin(admin theAdmin[adminMember], string username, string password) {
     bool check = false;
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < adminMember; i++) {
         if (username == theAdmin[i].username && password == theAdmin[i].password) {
             check = true;
         }
@@ -107,6 +110,8 @@ void loadDataAdmin(admin theAdmin[adminMember]) {
     theAdmin[0].password = "sayaAdmin";
     theAdmin[1].username = "MaulanaFC";
     theAdmin[1].password = "sayaJuga";
+    theAdmin[2].username = "a";
+    theAdmin[2].password = "a";
 }
 
 void loginForUser(user theUser[userMember]){
@@ -148,6 +153,7 @@ string getDateAndTime() {
     return dt;
 
 }
+/*
 bool validasiChoice(int input,int Min, int Max) {
     return input >= Min && input <= Max;
 }
@@ -160,7 +166,7 @@ void inputChoice(int &choice, int Min, int Max) {
         cin >> choice;
         i--;
     } while (!validasiChoice(choice, Min, Max) && i != -1);
-}
+}*/
 
 /*
 void loadDataUser(user theUser[userMember]){
@@ -172,4 +178,44 @@ void loadDataUser(user theUser[userMember]){
     theUser[2].password = "sayaCharles";
     theUser[3].username = "Dion";
     theUser[3].password = "sayaDion";
+}*/
+
+bool validasiChoice(char input, char Min, char Max) {
+    return input <= Max && input >= Min;
+}
+void inputChoice(char &choice, char Min, char Max) {
+    do {
+        choice = _getch();
+    } while (!validasiChoice(choice, Min, Max));
+    cout << endl;
+}
+/*
+void inputWithSpace(string &Input) {
+    char pass[32];
+    char ch;
+    bool Enter = false;
+    int i = 0;
+    while (!Enter) { // looping for ever
+        Input = "";
+        ch = _getch();
+        if ((ch>='a' && ch<='z') || (ch>='A' && ch<='Z') || (ch>='0' && ch<='9') || ch == ' ') {
+            pass[i]=ch; //store the ch to the pass
+            cout << ch;
+            i++;
+        }
+        if (ch=='\b' && i>=1) {
+            cout << "\b \b"; //to delete wrong character that user input
+            i--;
+        }
+        if (ch=='\r') { //r is Enter or 13 charecter code (enter)
+            Enter = true;
+        }
+    }
+    char a[i];
+    for (int j = 0; j <= i; j++) {
+        a[j] = pass[j];
+    }
+    string Temp(a);
+    Input = Temp;
+   cout << Input;
 }*/

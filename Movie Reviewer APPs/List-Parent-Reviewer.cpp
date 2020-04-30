@@ -36,6 +36,8 @@ void viewListUser(List_User L){
         cout<<endl;
         x = Next(x);
     }
+    cout << "\nEnter any Key to continue.\n";
+    getch();
 }
 
 void insertLastUser(List_User &L, address_User P){
@@ -150,12 +152,15 @@ void deleteElmUser(List_User &L, string username){
                 }
                 deleteAfterUser(x,P);
             }
+            cout << username <<" has been deleted." << endl;
         } else {
-        cout << "Username tidak ditemukan" << endl;
+        cout << "Username is undefined." << endl;
         }
     } else {
-        cout << "List Reviewer Kosong" << endl;
+        cout << "User list is empty." << endl;
     }
+    cout << "\nEnter any Key to continue.\n";
+    getch();
 }
 
 bool duplicateUsernameChecker(List_User L, string usernm) {

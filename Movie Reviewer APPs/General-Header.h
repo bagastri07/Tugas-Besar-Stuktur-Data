@@ -3,7 +3,7 @@
 #include <iostream>
 #include <conio.h>
 #include <ctime>
-//#include <string>
+#include <string>
 #define Next(P) P->Next
 #define Prev(P) P->Prev
 #define Info(P) P->Info
@@ -20,7 +20,7 @@ struct admin {
     string password;
 };
 
-const int adminMember = 2;
+const int adminMember = 3;
 const int userMember = 4;
 
 // Struct for ALL of the lists.
@@ -79,14 +79,18 @@ void userMenu();
 void greetingUser(string username);
 void greetingAdmin(string adminName);
 void insertPasword(string &password);
-void loginForAdmin(admin theAdmin[adminMember], string accessStatus);
+void loginForAdmin(admin theAdmin[adminMember], string &access);
 bool validasiAdmin(admin theAdmin[adminMember], string username, string password);
 void loadDataAdmin(admin theAdmin[adminMember]);
 void loginForUser(user theUser[userMember]);
 bool validasiUser(user theUser[userMember], string username, string password);
 //void loadDataUser(user theUser[userMember]);
 string getDateAndTime();
-bool validasiChoice(int input,int Min, int Max);
-void inputChoice(int &choice, int Min, int Max);
+//bool validasiChoice(int input,int Min, int Max);
+//void inputChoice(int &choice, int Min, int Max);
+bool validasiChoice(char input, char Min, char Max);
+void inputChoice(char &choice, char Min, char Max);
+//void inputWithSpace(string &Input);
+
 
 #endif // GENERAL-HEADER_H_INCLUDED

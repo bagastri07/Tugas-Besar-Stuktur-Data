@@ -19,6 +19,7 @@ address_Relation createElmRelation(List_Movie ListMovie, List_User ListUser,stri
         Info(P).comment = review;
         Info(P).date = date;
         Movie(P) = Mov;
+        Info(Mov).Status = "Reviewed";
         User(P) = User;
         Next(P) = NULL;
         return P;

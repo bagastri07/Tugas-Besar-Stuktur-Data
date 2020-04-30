@@ -2,16 +2,17 @@
 #include "List-Parent-Movie.h"
 #include "List-Relation.h"
 #include "List-Parent-Reviewer.h"
+#include <cstdio>
 
 int main()
 {
 
-
-    /*admin TheAdmin[adminMember];
+/*
+    admin TheAdmin[adminMember];
     loadDataAdmin(TheAdmin);
     loginForAdmin(TheAdmin);
     adminMenu(); */
-    /*
+/*
     List_Movie A; // List Parent 1
     loadDataMovies(A); // Sudah terkandung CreateList & InsertLast
     viewListMovie(A);
@@ -19,17 +20,17 @@ int main()
     deleteElmMovie(A,"Ratu Ilmu Hitam"); //DeleteLast
     deleteElmMovie(A,"Joker"); //DeleteAfter
     viewListMovie(A);
-    */
-    /*
+
+
     List_User B; // List Parent 2
     loadDataUsers(B); // Sudah terkandung CreateList, InsertFirst, InsertLast, dan InsertAfter
     viewListUser(B);
-    /*deleteElmUser(B,"AmandaZahra"); //DeleteFirst;
+    deleteElmUser(B,"AmandaZahra"); //DeleteFirst;
     deleteElmUser(B,"ZicoArief"); //DeleteLast
     deleteElmUser(B,"DesyAnwar"); //DeleteAfter
     viewListUser(B);
-    */
-    /*
+
+
     List_Relation C; // List Relasi
     loadDataRelation(C,A,B); // sudah terkandung createList dan insertFirst sesuai dengan spesifikasi soal
     viewListRelation(C);
@@ -41,7 +42,8 @@ int main()
     //user TheUser[userMember];
     //loginForUser(TheUser);
     //userMenu();
-    */
+*/
+
 
     //Set UP & Load the default data
     List_Movie listMovie;
@@ -54,17 +56,101 @@ int main()
     //variabel Set Up;
     admin theAdmin[adminMember];
     loadDataAdmin(theAdmin);
-    int choice;
-
+    string access;
+    char Choice;
+    cout << countMovieReviewed(listMovie);
     //Menu
-    while(choice != 4) {
+    while(Choice != '4') {
         loginMenu();
-        inputChoice(choice, 1, 4);
-        switch(choice) {
-        case 1:
-            choice = 0;
-            loginForAdmin(theAdmin);
+        inputChoice(Choice, '1', '4');
+        switch(Choice) {
+        case '1':
+            Choice = '0';
+            loginForAdmin(theAdmin, access);
+            if (access == "Granted") {
+                while(Choice != '8') {
+                    adminMenu();
+                    inputChoice(Choice, '1', '8');
+                    switch(Choice) {
+                    case '1':
+                        {
+                            Choice = '0';
+                            string title, year;
+                            cout << "Title of The Movie : ";
+                            cin.ignore();
+                            getline(cin, title);
+                            cout << "Year of the Movie  : ";
+                            cin >> year;
+                            address_Movie A;
+                            A = createElmMovie(title, year);
+                            insertLastMovie(listMovie, A);
+                            cout << title <<" has been added to the list." << endl;
+                            break;
+                        }
+                    case '2':
+                        viewListMovie(listMovie);
+                        break;
+                    case '3':
+                        {
+                            string title, year;
+                            cout << "====>Edit Data Movie<===" << endl;
+                            cout << "(Search) Title of the Movie : ";
+                            cin.ignore();
+                            getline(cin, title);
+                            address_Movie P = searchElmMovie(listMovie, title);
+                            if (P != NULL) {
+                                cout << "(New) Title : ";
+                                cin.ignore();
+                                getline(cin, title);
+                                cout << "(New) Year  : ";
+                                cin >> year;
+                                Info(P).Judul = title;
+                                Info(P).Tahun = year;
+                            } else {
+                                cout << "The movie not found." << endl;
+                            }
+                            break;
 
+                        }
+                    case '4':
+                        {
+                            string title;
+                            cout << "====>Delete Data Movie<===" << endl;
+                            cout << "(Search) Title of the Movie : ";
+                            getline(cin, title);
+                            getline(cin, title);
+                            deleteElmMovie(listMovie, title);
+                            cout << "\nEnter any Key to continue.\n";
+                            getch();
+                            break;
+                        }
+                    case '5':
+                        viewListUser(listUser);
+                        break;
+                    case '6':
+                        {
+                            string username;
+                            cout << "====>Delete User<===" << endl;
+                            cout << "(Search) Username : ";
+                            cin >> username;
+                            deleteElmUser(listUser, username);
+                            break;
+                        }
+                    default:
+                        cout << "Missing the choice, you input wrong number." << endl;
+                    }
+                }
+            }
+        case '2':
+
+            break;
+        case '3':
+            break;
+        case '4':
+            access = "Denied";
+            break;
+        default:
+            cout << "Missing the choice, you input wrong number." << endl;
         }
     }
 

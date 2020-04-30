@@ -29,6 +29,8 @@ void viewListMovie(List_Movie L) {
         cout<<endl;
         A = Next(A);
     }
+    cout << "\nEnter any Key to continue.\n";
+    getch();
 }
 void insertLastMovie(List_Movie &L, address_Movie P){
     if (isEmptyListMovie(L)) {
@@ -99,12 +101,15 @@ void deleteElmMovie(List_Movie &L, string judul) {
                 }
                 deleteAfterMovie(A,P);
             }
+            cout << "'" << judul << "' was deleted." << endl;
         } else {
-        cout << "Judul Film tidak ditemukan" << endl;
+        cout << "Movie Title not found." << endl;
         }
     } else {
-        cout << "List Movie Kosong" << endl;
+        cout << "The movie list is empty." << endl;
     }
+    cout << "\nEnter any Key to continue.\n";
+    getch();
 }
 void loadDataMovies(List_Movie &L) {
     createListMovie(L);
@@ -122,3 +127,26 @@ void loadDataMovies(List_Movie &L) {
     A = createElmMovie("Ratu Ilmu Hitam","2019");
     insertLastMovie(L,A);
 }
+int countMovie(List_Movie L) {
+    address_Movie A = First(L);
+    int i = 0;
+    while (A != NULL) {
+        i++;
+        A = Next(A);
+    }
+    return i;
+}
+int countMovieReviewed(List_Movie L) {
+    address_Movie A = First(L);
+    int i = 0;
+    while (A != NULL) {
+        if (Info(A).Status == "Reviewed") {
+            i++;
+        }
+        A = Next(A);
+
+    }
+    return i;
+}
+
+
