@@ -34,13 +34,25 @@ void userMenu() {
     cout << "                         User Menu                          *\n";
     cout << "*************************************************************\n";
     cout << " |1|. Insert a Review                                       *\n";
-    cout << " |2|. Delete a Review                                       *\n";
-    cout << " |3|. My Review Movie                                       *\n";
-    cout << " |4|. My Info                                               *\n";
-    cout << " |5|.Exit.                                                  *\n";
+    cout << " |2|. My Review Movie                                       *\n";
+    cout << " |3|. My Info                                               *\n";
+    cout << " |4|.Exit.                                                  *\n";
     cout << "*************************************************************\n";
     cout << " Enter your choice : ";
 }
+
+void nonuserMenu() {
+    cout << "*************************************************************\n";
+    cout << "*                   Movie Reviewer APPs                     *\n";
+    cout << "                         User Menu                          *\n";
+    cout << "*************************************************************\n";
+    cout << " |1|. Register                                              *\n";
+    cout << " |2|. View All Reviews                                      *\n";
+    cout << " |3|.Exit.                                                  *\n";
+    cout << "*************************************************************\n";
+    cout << " Enter your choice : ";
+}
+
 void greetingUser(string username) {
     cout << "Welcome Back!!!\n";
     cout << "Your're login as '"<<username<<"' (User)\n";

@@ -59,6 +59,8 @@ int main()
 
     string access;
     char Choice;
+    bool c3;
+    c3 = false;
     cout << countMovieReviewed(listMovie);
     //Menu
     while(Choice != '4') {
@@ -155,30 +157,93 @@ int main()
             Choice = '0';
             loginForUser(listUser, access);
             if(access == "Granted"){
-                while(Choice != '5'){
+                while(Choice != '4'){
                     userMenu();
-                    inputChoice(Choice, '1', '5');
+                    inputChoice(Choice, '1', '4');
                     switch(Choice){
                     case '1':
                         {
+                            string title, review, time;
+                            address_User u=First(listUser);
+                            address_Movie mt;
+                            int i=0;
+                            bool check;
+                            cout<<"====>Insert a Review<===\n\n";
+                            viewListMovie(listMovie);
+                            cout<<"What movie title do you want to review?\n";
+                            cout<<"Title : ";
+                            cin.ignore();
+                            getline(cin, title);
+                            mt = searchElmMovie(listMovie, title);
+                            cout<<endl;
+                            if (mt != NULL){
+                                cout<<"===>Reviewing Movie "<<title<<"<===\n";
+                                check = duplicateUsernameAtRelation(listRelation, Info(u).username, title);
+                                if (!check){
+                                cout<<"Write a review :\n";
+                                    istream& ignore (streamsize n = 1, int delim = EOF);
+                                    getline(cin, review);
+
+                                    insertElmRelation(listRelation, listMovie, listUser, title, Info(u).username, review);
+                                    viewListRelation(listRelation);
+                                }else{
+                                    cout<<"You have reviewed "<<title<<endl;
+                                }
+                            }else{
+                                cout<<"Movie not on the list";
+                            }
+
+                            getch();
                             break;
                         }
                     case '2':
                         {
+                            address_User u=First(listUser);
+                            string title;
+                            bool check;
+                            viewMyListRelation(listRelation, Info(u).username, check);
+                            cout<<endl;
+                            if (check){
+                                cout<<"1. Delete Movie Review\n";
+                                cout<<"2. Exit\n";
+                                Choice = '0';
+                                while(Choice != '2'){
+                                    inputChoice(Choice, '1', '2');
+                                    switch(Choice){
+                                    case '1':
+                                        {
+                                            cout<<"What movie reviews you want to delete?\n";
+                                            istream& ignore (streamsize n = 1, int delim = EOF);
+                                            getline(cin, title);
+                                            deleteElmRelation(listRelation, title, Info(u).username);
+                                            viewMyListRelation(listRelation, Info(u).username, check);
+                                            cout << "\nEnter 22 to continue.\n";
+                                            break;
+                                        }
+                                    case '2':
+                                        {
+                                           break;
+
+                                        }
+                                    default:
+                                        cout << "Missing the choice, you input wrong number.\n" << endl;
+                                    }
+                                }
+
+                            }
+                            getch();
                             break;
                         }
                     case '3':
-                        {
-                            break;
-                        }
-                    case '4':
                         {
                             address_User P = First(listUser);
                             cout << "===>My Info<===" << endl;
                             cout<<"Username : "<< Info(P).username<<endl;
                             cout<<"Password : "<< Info(P).password<<endl;
-                            cout<<"Umur : "<< Info(P).umur<<endl;
+                            cout<<"Age      : "<< Info(P).umur<<endl;
                             cout<<endl;
+                            cout << "Enter any Key to continue.\n";
+                            getch();
                             break;
                         }
                     default:
@@ -189,6 +254,46 @@ int main()
 
             break;
         case '3':
+            Choice = '0';
+            nonuserMenu();
+            while(Choice != '3'){
+                inputChoice(Choice, '1', '3');
+                switch(Choice){
+                case '1':
+                    if (!c3){
+                         {
+                            infotype_User regData;
+
+                            cout<<"===> Register a New Member <==="<<endl;
+                            cout<<"Username : ";
+                            cin>>regData.username;
+                            cout<<"Password : ";
+                            cin>>regData.password;
+                            cout<<"Age      : ";
+                            cin>>regData.umur;
+                            InsertElmUser(listUser, regData);
+                            viewListUser(listUser);
+                            loadDataUsers(listUser);
+                            cout<<"Silahkan Log-in"<<endl;
+                            cout<<"Enter 3 to menu"<<endl;
+                            break;
+                         }
+                    }
+                case '2':
+                    {
+                        viewListRelation(listRelation);
+                        cout<<"Enter 3 to menu"<<endl;
+                        break;
+
+                    }
+                case '3':
+                    {
+                        c3 = true;
+                        break;
+                    }
+                }
+
+            }
             break;
         case '4':
             access = "Denied";

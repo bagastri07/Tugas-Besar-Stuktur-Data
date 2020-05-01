@@ -89,6 +89,6 @@ string getDateAndTime();
 bool validasiChoice(char input, char Min, char Max);
 void inputChoice(char &choice, char Min, char Max);
 //void inputWithSpace(string &Input);
-
+void nonuserMenu();
 
 #endif // GENERAL-HEADER_H_INCLUDED

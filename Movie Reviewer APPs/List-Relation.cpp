@@ -141,6 +141,34 @@ void viewListRelation(List_Relation L) {
         } while (A != First(L));
     }
 }
+
+void viewMyListRelation(List_Relation L, string username, bool &check){
+    address_Relation A = First(L);
+    check=false;
+    int i=0;
+    if (A != NULL) {
+        do {
+            address_Movie B = Movie(A);
+            address_User C = User(A);
+            if(Info(User(A)).username == username){
+                i++;
+                cout << i << ")  Title    : " << Info(B).Judul << endl;
+                cout << "    Year     : " << Info(B).Tahun << endl;
+                cout << "    User     : " << Info(C).username << endl;
+                cout << "    Age      : " << Info(C).umur << endl;
+                cout << "    Review   : " << Info(A).comment << endl;
+                cout << "    Time     : " << Info(A).date << endl;
+                cout << endl;
+                check = true;
+            }
+            A = Next(A);
+        } while (A != First(L));
+        if(!check){
+            cout<<"You never review a movie\n";
+        }
+    }
+}
+
 bool duplicateUsernameAtRelation (List_Relation L, string username, string title ) {
     if (!isEmptyListRelation(L)) {
         address_Relation A = First(L);

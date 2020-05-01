@@ -41,10 +41,10 @@
 1588138358 c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-relation.h
 	"General-Header.h"
 
-1588338015 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\general-implement.cpp
+1588353424 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\general-implement.cpp
 	"General-Header.h"
 
-1588338015 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\general-header.h
+1588352208 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\general-header.h
 	<iostream>
 	<conio.h>
 	<ctime>
@@ -56,27 +56,27 @@
 
 1588336787 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-parent-movie.h
 
-1588336787 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-relation.cpp
+1588351695 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-relation.cpp
 	"General-Header.h"
 	"List-Relation.h"
 	"List-Parent-Movie.h"
 	"List-Parent-Reviewer.h"
 
-1588336787 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-relation.h
+1588349912 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-relation.h
 	"General-Header.h"
 
-1588339370 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\main.cpp
+1588353784 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\main.cpp
 	"General-Header.h"
 	"List-Parent-Movie.h"
 	"List-Relation.h"
 	"List-Parent-Reviewer.h"
 	<cstdio>
 
-1588338592 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.cpp
+1588352842 source:e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.cpp
 	"General-Header.h"
 	"List-Parent-Reviewer.h"
 
-1588338592 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.h
+1588352842 e:\telkom university\s1 informatika\semester 2\struktur data\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.h
 
 1588267074 source:c:\users\bagas\onedrive\documents\tugas kuliah\s1 informatika\semester 2\stuktur data\tubes struktdat\tugas-besar-stuktur-data\movie reviewer apps\list-parent-reviewer.cpp
 	"General-Header.h"
