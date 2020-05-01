@@ -136,6 +136,15 @@ int main()
                             deleteElmUser(listUser, username);
                             break;
                         }
+                    case '7' :
+                        {
+                            cout << "===>The Statitic of the Movies<===" << endl;
+                            cout << "Total number of movies   : " << countMovie(listMovie) << endl;
+                            cout << "Movies has been reviewed : " << countMovieReviewed(listMovie) << endl;
+                            cout << "\nEnter any Key to continue.\n";
+                            getch();
+                            break;
+                        }
                     default:
                         cout << "Missing the choice, you input wrong number." << endl;
                     }
