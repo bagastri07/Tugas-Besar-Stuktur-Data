@@ -189,4 +189,40 @@ void loadDataUsers(List_User &L){
     InsertElmUser(L,newData);
     newData.username = "DesyAnwar", newData.password  ="thisispassword123", newData.umur = 33;
     InsertElmUser(L,newData);
+    newData.username = "1", newData.password  ="1", newData.umur = 21;
+    InsertElmUser(L,newData);
+}
+
+void loginForUser(List_User theUser, string &access){
+    cout << "*************************************************************\n";
+    cout << "*                   Movie Reviewer APPs                     *\n";
+    cout << "                        User Login                         *\n";
+    cout << "*************************************************************\n";
+    string username, password;
+
+    cout << "Username : ";
+    cin >> username;
+    cout << "Password : ";
+    insertPasword(password);
+    cout << endl;
+    if (validasiUser(theUser, username, password)) {
+        greetingUser(username);
+        access = "Granted";
+    } else {
+        cout << "The username and/or password you specified are not correct.\n";
+        access = "Denied";
+    }
+    cout << "\nEnter any Key to continue.\n";
+    getch();
+}
+
+bool validasiUser(List_User theUser, string username, string password){
+    bool check = false;
+    address_User P = First(theUser);
+    for (int i = 0; i < 4; i++) {
+        if (username == Info(P).username && password == Info(P).password) {
+            check = true;
+        }
+    }
+    return check;
 }

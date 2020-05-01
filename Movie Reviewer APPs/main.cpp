@@ -56,6 +56,7 @@ int main()
     //variabel Set Up;
     admin theAdmin[adminMember];
     loadDataAdmin(theAdmin);
+
     string access;
     char Choice;
     cout << countMovieReviewed(listMovie);
@@ -151,6 +152,40 @@ int main()
                 }
             }
         case '2':
+            Choice = '0';
+            loginForUser(listUser, access);
+            if(access == "Granted"){
+                while(Choice != '5'){
+                    userMenu();
+                    inputChoice(Choice, '1', '5');
+                    switch(Choice){
+                    case '1':
+                        {
+                            break;
+                        }
+                    case '2':
+                        {
+                            break;
+                        }
+                    case '3':
+                        {
+                            break;
+                        }
+                    case '4':
+                        {
+                            address_User P = First(listUser);
+                            cout << "===>My Info<===" << endl;
+                            cout<<"Username : "<< Info(P).username<<endl;
+                            cout<<"Password : "<< Info(P).password<<endl;
+                            cout<<"Umur : "<< Info(P).umur<<endl;
+                            cout<<endl;
+                            break;
+                        }
+                    default:
+                        cout << "Missing the choice, you input wrong number." << endl;
+                    }
+                }
+            }
 
             break;
         case '3':

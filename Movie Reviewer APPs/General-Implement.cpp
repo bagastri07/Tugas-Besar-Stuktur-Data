@@ -1,5 +1,6 @@
 #include "General-Header.h"
 
+
 void loginMenu() {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
@@ -114,36 +115,6 @@ void loadDataAdmin(admin theAdmin[adminMember]) {
     theAdmin[2].password = "a";
 }
 
-void loginForUser(user theUser[userMember]){
-    cout << "*************************************************************\n";
-    cout << "*                   Movie Reviewer APPs                     *\n";
-    cout << "                        User Login                         *\n";
-    cout << "*************************************************************\n";
-    string username, password;
-
-    cout << "Username : ";
-    cin >> username;
-    cout << "Password : ";
-    insertPasword(password);
-    cout << endl;
-    if (validasiUser(theUser, username, password)) {
-        greetingUser(username);
-    } else {
-        cout << "The username and/or password you specified are not correct.\n";
-    }
-    cout << "\nEnter any Key to continue.\n";
-    getch();
-}
-
-bool validasiUser(user theUser[userMember], string username, string password){
-    bool check = false;
-    for (int i = 0; i < 4; i++) {
-        if (username == theUser[i].username && password == theUser[i].password) {
-            check = true;
-        }
-    }
-    return check;
-}
 string getDateAndTime() {
     // current date/time based on current system
    time_t now = time(0);
