@@ -1,80 +1,83 @@
 Pembagian Kerja
 Mahasiswa 1 (Bagas Tri Wibowo - 1301194051)
 A. List Parent Movie
-1. createListMovie
-2. bool isEmptyListMovie
-3. createElmMovie
-4. viewListMovie
-5. insertLastMovie
-6. deleteFirstMovie
-7. deleteLastMovie
-8. deleteAfterMovie
-9. searchElmMovie
-10. deleteElmMovie
-11. loadDataMovies
-12. countMovie
-13. countMovieReviewed
+1. Procedure createListMovie
+2. Function isEmptyListMovie
+3. Function createElmMovie
+4. Procedure viewListMovie
+5. Procedure insertLastMovie
+6. Procedure deleteFirstMovie
+7. Procedure deleteLastMovie
+8. Procedure deleteAfterMovie
+9. Function searchElmMovie
+10. Procedure deleteElmMovie
+11. Procedure loadDataMovies
+12. Function countMovie
+13. Function countMovieReviewed
 
 B. List Relation
-1. createListRelation
-2. isEmptyListRelation
-3. createElmRelation
-4. insertFirstRelation
-5. insertElmRelation
-6. deleteFirstRelation
-7. deleteLastRelation
-8. deleteAfterRelation
-9. searchElmRelation
-10. deleteElmRelation
-11. viewListRelation
-12. duplicateUsernameAtRelation
-13. loadDataRelation
-14. searchTheMostReviewedMovie
-15. countReviewedSingleMovie
+1. Procedure createListRelation
+2. Function isEmptyListRelation
+3. Function createElmRelation
+4. Procedure insertFirstRelation
+5. Procedure insertElmRelation
+6. Procedure deleteFirstRelation
+7. Procedure deleteLastRelation
+8. Procedure deleteAfterRelation
+9. Function searchElmRelation
+10. Procedure deleteElmRelation
+11. Procedure viewListRelation
+12. Function duplicateUsernameAtRelation
+13. Procedure loadDataRelation
+14. Function searchTheMostReviewedMovie
+15. Function countReviewedSingleMovie
+16. Procedure viewDetailUsers
+17. Function searchTheMostActiveUser
+18. Function countReviewOfUser
 
 C. General
-1. loginMenu
-2. adminMenu
-3. userMenu
-4. greetingUser
-5. greetingAdmin
-6. insertPasword
-7. loginForAdmin
-8. validasiAdmin
-9. loadDataAdmin
-10. getDateAndTime
-11. validasiChoice
-12. inputChoice
-13. inputWithSpace
+1. Procedure loginMenu
+2. Procedure adminMenu
+3. Procedure userMenu
+4. Procedure greetingUser
+5. Procedure greetingAdmin
+6. Procedure insertPasword
+7. Procedure loginForAdmin
+8. Function validasiAdmin
+9. Procedure loadDataAdmin
+10. Function getDateAndTime
+11. Function validasiChoice
+12. Function inputChoice
+13. Procedure inputWithSpace
 
 D. Main Program
 1. Menyusun Admin (program utama)
 
 Mahasiswa 2 (Maulana Farrel Ceskicevas - 1301190311)
 A. List Parent Review
-1. createListUser
-2. isEmptyListUser
-3. createElmUser
-4. viewListUser
-5. insertLastUser
-6. insertFirstUser
-7. insertAfterUser
-8. InsertElmUser
-9. deleteFirstUser
-10. deleteLastUser
-11. deleteAfterUser
-12. searchElmUser
-13. deleteElmUser
-14. duplicateUsernameChecker
-15. loadDataUsers
-16. loginForUser
-17. validasiUser
+1. Procedure createListUser
+2. Function isEmptyListUser
+3. Function createElmUser
+4. Procedure viewListUser
+5. Procedure insertLastUser
+6. Procedure insertFirstUser
+7. Procedure insertAfterUser
+8. Procedure InsertElmUser
+9. Procedure deleteFirstUser
+10. Procedure deleteLastUser
+11. Procedure deleteAfterUser
+12. Function searchElmUser
+13. Procedure deleteElmUser
+14. Function duplicateUsernameChecker
+15. FunctionloadDataUsers
+16. Procedure loginForUser
+17. Function validasiUser
 
 B. List Relation
-1. viewMyListRelation
+1. Procedure viewMyListRelation
 
 C. General
-1. nonuserMenu
+1. Procedure nonuserMenu
 
 D. Main Program
 1. Menyusun User (program utama)
