@@ -236,13 +236,82 @@ int main()
                         }
                     case '3':
                         {
-                            address_User P = First(listUser);
+                            address_User P = First(listUser), Q;
+                            string username, password;
+                            int age;
                             cout << "===>My Info<===" << endl;
                             cout<<"Username : "<< Info(P).username<<endl;
                             cout<<"Password : "<< Info(P).password<<endl;
                             cout<<"Age      : "<< Info(P).umur<<endl;
                             cout<<endl;
-                            cout << "Enter any Key to continue.\n";
+                            cout<<"===>Edit My Info<===\n";
+                            cout<<"1) Change Username\n";
+                            cout<<"2) Change Password\n";
+                            cout<<"3) Change Age\n";
+                            cout<<"4) Exit\n";
+                            Choice = '0';
+                            while(Choice != '4'){
+                                inputChoice(Choice, '1', '4');
+                                switch(Choice){
+                                case '1':
+                                    {
+                                        cout<<"Input your new username :";
+                                        cin>>username;
+                                        Info(P).username = username;
+                                        cout << "===>Updated My Info<===" << endl;
+                                        cout<<"Username : "<< Info(P).username<<endl;
+                                        cout<<"Password : "<< Info(P).password<<endl;
+                                        cout<<"Age      : "<< Info(P).umur<<endl;
+                                        cout<<endl;
+                                        cout<<"===>Edit My Info<===\n";
+                                        cout<<"1) Change Username\n";
+                                        cout<<"2) Change Password\n";
+                                        cout<<"3) Change Age\n";
+                                        cout<<"4) Exit\n";
+                                        break;
+                                    }
+                                case '2':
+                                    {
+                                        cout<<"Input your new password :";
+                                        cin>>password;
+                                        Info(P).password = password;
+                                        cout << "===>Updated My Info<===" << endl;
+                                        cout<<"Username : "<< Info(P).username<<endl;
+                                        cout<<"Password : "<< Info(P).password<<endl;
+                                        cout<<"Age      : "<< Info(P).umur<<endl;
+                                        cout<<endl;
+                                        cout<<"===>Edit My Info<===\n";
+                                        cout<<"1) Change Username\n";
+                                        cout<<"2) Change Password\n";
+                                        cout<<"3) Change Age\n";
+                                        cout<<"4) Exit\n";
+                                        break;
+                                    }
+                                case '3':
+                                    {
+                                        cout<<"Input your age :";
+                                        cin>>age;
+                                        Info(P).umur = age;
+                                        cout << "===>Updated My Info<===" << endl;
+                                        cout<<"Username : "<< Info(P).username<<endl;
+                                        cout<<"Password : "<< Info(P).password<<endl;
+                                        cout<<"Age      : "<< Info(P).umur<<endl;
+                                        cout<<endl;
+                                        cout<<"===>Edit My Info<===\n";
+                                        cout<<"1) Change Username\n";
+                                        cout<<"2) Change Password\n";
+                                        cout<<"3) Change Age\n";
+                                        cout<<"4) Exit\n";
+                                        break;
+                                    }
+                                case '4':
+                                    {
+                                        break;
+                                    }
+                                default:
+                                    cout << "Missing the choice, you input wrong number.\n" << endl;
+                                }
+                            }
                             getch();
                             break;
                         }
