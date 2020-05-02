@@ -1,0 +1,81 @@
+Pembagian Kerja
+Mahasiswa 1 (Bagas Tri Wibowo - 1301194051)
+A. List Parent Movie
+1. createListMovie
+2. bool isEmptyListMovie
+3. createElmMovie
+4. viewListMovie
+5. insertLastMovie
+6. deleteFirstMovie
+7. deleteLastMovie
+8. deleteAfterMovie
+9. searchElmMovie
+10. deleteElmMovie
+11. loadDataMovies
+12. countMovie
+13. countMovieReviewed
+
+B. List Relation
+1. createListRelation
+2. isEmptyListRelation
+3. createElmRelation
+4. insertFirstRelation
+5. insertElmRelation
+6. deleteFirstRelation
+7. deleteLastRelation
+8. deleteAfterRelation
+9. searchElmRelation
+10. deleteElmRelation
+11. viewListRelation
+12. duplicateUsernameAtRelation
+13. loadDataRelation
+14. searchTheMostReviewedMovie
+15. countReviewedSingleMovie
+
+C. General
+1. loginMenu
+2. adminMenu
+3. userMenu
+4. greetingUser
+5. greetingAdmin
+6. insertPasword
+7. loginForAdmin
+8. validasiAdmin
+9. loadDataAdmin
+10. getDateAndTime
+11. validasiChoice
+12. inputChoice
+13. inputWithSpace
+
+D. Main Program
+1. Menyusun Admin (program utama)
+
+Mahasiswa 2 (Maulana Farrel Ceskicevas - 1301190311)
+A. List Parent Review
+1. createListUser
+2. isEmptyListUser
+3. createElmUser
+4. viewListUser
+5. insertLastUser
+6. insertFirstUser
+7. insertAfterUser
+8. InsertElmUser
+9. deleteFirstUser
+10. deleteLastUser
+11. deleteAfterUser
+12. searchElmUser
+13. deleteElmUser
+14. duplicateUsernameChecker
+15. loadDataUsers
+16. loginForUser
+17. validasiUser
+
+B. List Relation
+1. viewMyListRelation
+
+C. General
+1. nonuserMenu
+
+D. Main Program
+1. Menyusun User (program utama)
+2. Menyusun Non-User (program utama)
