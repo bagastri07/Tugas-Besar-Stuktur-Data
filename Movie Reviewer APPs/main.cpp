@@ -65,6 +65,7 @@ int main()
         inputChoice(Choice, '1', '4');
         switch(Choice) {
         case '1':
+            system("cls");
             Choice = '-';
             loginForAdmin(theAdmin, access);
             if (access == "Granted") {
@@ -75,6 +76,7 @@ int main()
                     switch(Choice) {
                     case '1':
                         {
+                            system("cls");
                             Choice = '-';
                             string title, year;
                             cout << "Title of The Movie : ";
@@ -91,11 +93,13 @@ int main()
                             break;
                         }
                     case '2':
+                        system("cls");
                         viewListMovie(listMovie);
                         system("cls");
                         break;
                     case '3':
                         {
+                            system("cls");
                             viewListMovie(listMovie);
                             string title, year;
                             cout << "====>Edit Data Movie<===" << endl;
@@ -111,7 +115,7 @@ int main()
                                 cin >> year;
                                 Info(P).Judul = title;
                                 Info(P).Tahun = year;
-                                cout <<title + "data has been edited." << endl;
+                                cout <<title + " data has been edited." << endl;
                                 cout << "\nEnter any Key to continue.\n";
                                 getch();
                                 system("cls");
@@ -126,23 +130,28 @@ int main()
                         }
                     case '4':
                         {
+                            system("cls");
                             string title;
-                            cout << "====>Delete Data Movie<===" << endl;
-                            cout << "(Search) Title of the Movie : ";
+                            cout << "====>Delete Data Movie<===\n" << endl;
+                            viewListMovie(listMovie);
+                            cout << "Title of the Movie : ";
                             inputWithSpace(title);
                             deleteElmMovie(listMovie, title);
                             system("cls");
                             break;
                         }
                     case '5':
+                        system("cls");
                         viewListUser(listUser);
                         system("cls");
                         break;
                     case '6':
                         {
+                            system("cls");
                             string username;
-                            cout << "====>Delete User<===" << endl;
-                            cout << "(Search) Username : ";
+                            cout << "====>Delete User<===\n" << endl;
+                            viewListUser(listUser);
+                            cout << "Username : ";
                             cin >> username;
                             deleteElmUser(listUser, username);
                             system("cls");
@@ -150,12 +159,13 @@ int main()
                         }
                     case '7' :
                         {
+                            system("cls");
                             int totalMovie = countMovie(listMovie);
                             int totalMovieReviewed = countMovieReviewed(listMovie);
                             float percentageR = 100*float(totalMovieReviewed)/float(totalMovie);
                             string theMost = Info(Movie(searchTheMostReviewedMovie(listRelation))).Judul;
                             string ActiveUser = Info(User(searchTheMostActiveUser(listRelation))).username;
-                            cout << "===>The Statitic of the Movies<===" << endl;
+                            cout << "===>The Statistic of the Movies<===" << endl;
                             cout << "Total number of movies        : " << totalMovie << endl;
                             cout << "Movies has been reviewed      : " << totalMovieReviewed << endl;
                             cout << "Percentage of movies reviewed : " << percentageR << " %" << endl;
@@ -170,12 +180,14 @@ int main()
                             break;
                         }
                     case '8':
+                        system("cls");
                         cout << "===> Detail Movies<===" << endl;
                         viewListRelation(listRelation);
                         cout << "\nEnter any Key to continue.\n";
                         getch();
                         break;
                     case '9':
+                        system("cls");
                         cout << "===> Detail Users <<=" << endl;
                         viewDetailUsers(listRelation, listUser);
                         cout << "\nEnter any Key to continue.\n";
@@ -186,6 +198,7 @@ int main()
             system("cls");
             break;
         case '2':
+            system("cls");
             Choice = '0';
             loginForUser(listUser, access, userName);
             if(access == "Granted"){
@@ -196,6 +209,7 @@ int main()
                     switch(Choice){
                     case '1':
                         {
+                            system("cls");
                             string title, review, time;
                             //address_User u=First(listUser);
                             address_Movie mt;
@@ -218,6 +232,7 @@ int main()
                                     inputWithSpace(review);
 
                                     insertElmRelation(listRelation, listMovie, listUser, title, userName, review);
+                                    system("cls");
                                     viewListRelation(listRelation);
                                 }else{
                                     cout<<"You have reviewed "<<title<<endl;
@@ -232,16 +247,16 @@ int main()
                         }
                     case '2':
                         {
+                            system("cls");
                             //address_User u=First(listUser);
                             string title;
                             bool check;
                             viewMyListRelation(listRelation, userName, check);
-                            cout<<endl;
                             if (check){
                                 Choice = '0';
                                 while(Choice != '2'){
-                                    cout<<"1. Delete Movie Review\n";
-                                    cout<<"2. Exit\n";
+                                    cout<<"|1|. Delete Movie Review\n";
+                                    cout<<"|2|. Return to Menu\n";
                                     cout<<"Enter your choice: ";
                                     inputChoice(Choice, '1', '2');
                                     switch(Choice){
@@ -253,7 +268,7 @@ int main()
                                             cout<< "Review of " + title + " has been deleted." << endl;
                                             cout << "\nEnter any Key to continue.\n";
                                             getch();
-
+                                            system("cls");
                                             viewMyListRelation(listRelation, userName, check);
                                             break;
                                         }
@@ -269,6 +284,7 @@ int main()
                         }
                     case '3':
                         {
+                            system("cls");
                             Choice = '0';
                             //address_User P = First(listUser), Q;
                             address_User P = searchElmUser(listUser, userName);
@@ -284,8 +300,8 @@ int main()
                                 cout<<"1) Change Username\n";
                                 cout<<"2) Change Password\n";
                                 cout<<"3) Change Age\n";
-                                cout<<"4) Exit\n";
-                                cout<<" enter your choice: ";
+                                cout<<"4) Return to Menu\n";
+                                cout<<"Enter your choice: ";
                                 inputChoice(Choice, '1', '4');
                                 switch(Choice){
                                 case '1':
@@ -326,6 +342,7 @@ int main()
             Choice = 0;
             break;
         case '3':
+            system("cls");
             Choice = '0';
             while(Choice != '3'){
                 nonuserMenu();
@@ -356,11 +373,17 @@ int main()
                     }
                 case '2':
                     {
+                        system("cls");
                         viewListRelation(listRelation);
-                        //cout<<"Enter 3 to menu"<<endl;
+                        cout << "Enter any Key to continue.\n";
+                        getch();
                         system("cls");
                         break;
 
+                    }
+                case '3':
+                    {
+                        system("cls");
                     }
                 }
 

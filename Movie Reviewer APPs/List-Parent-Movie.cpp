@@ -20,7 +20,7 @@ address_Movie createElmMovie(string judul, string tahun) {
 void viewListMovie(List_Movie L) {
     address_Movie A;
     A = First(L);
-    cout<<"===>List Movie<===="<<endl;
+    cout<<"===>Movie List<===="<<endl;
     while (A != NULL) {
         //Sementara tidak menggunakan ID
         //cout<<"ID : "<<Info(A).ID<<endl;

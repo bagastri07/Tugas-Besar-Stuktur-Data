@@ -196,7 +196,7 @@ void loadDataUsers(List_User &L){
 void loginForUser(List_User theUser, string &access, string &userN){
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
-    cout << "                        User Login                         *\n";
+    cout << "*                       User Login                          *\n";
     cout << "*************************************************************\n";
     string username, password;
 

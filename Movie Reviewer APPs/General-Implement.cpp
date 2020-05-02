@@ -5,54 +5,54 @@ void loginMenu() {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
     cout << "*************************************************************\n";
-    cout << " |1|. Login as Admin                                        *\n";
-    cout << " |2|. Login as User                                         *\n";
-    cout << " |3|. Register New User                                     *\n";
-    cout << " |4|.Exit.                                                 *\n";
+    cout << "* |1|. Login as Admin                                       *\n";
+    cout << "* |2|. Login as User                                        *\n";
+    cout << "* |3|. Non User                                             *\n";
+    cout << "* |4|. Exit                                                 *\n";
     cout << "*************************************************************\n";
-    cout << " Enter your choice and press enter: ";
+    cout << "Enter your choice and press enter: ";
 }
 void adminMenu() {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
-    cout << "                         Admin Menu                         *\n";
+    cout << "*                         Admin Menu                        *\n";
     cout << "*************************************************************\n";
-    cout << " |1|. Insert New Movie                                      *\n";
-    cout << " |2|. View All Movie                                        *\n";
-    cout << " |3|. Update Data Movie                                     *\n";
-    cout << " |4|. Delete Data Movie                                     *\n";
-    cout << " |5|. View Data Reviewer                                    *\n";
-    cout << " |6|. Delete Reviewer (user)                                *\n";
-    cout << " |7|. Statitic of Movies                                    *\n";
-    cout << " |8|. Detail of Movies                                      *\n";
-    cout << " |9|. Detail of Users                                       *\n";
-    cout << " |0|.Exit.                                                  *\n";
+    cout << "* |1|. Insert New Movie                                     *\n";
+    cout << "* |2|. View All Movie                                       *\n";
+    cout << "* |3|. Update Data Movie                                    *\n";
+    cout << "* |4|. Delete Data Movie                                    *\n";
+    cout << "* |5|. View Data Reviewer                                   *\n";
+    cout << "* |6|. Delete Reviewer (user)                               *\n";
+    cout << "* |7|. Statistic of Movies                                  *\n";
+    cout << "* |8|. Detail of Movies                                     *\n";
+    cout << "* |9|. Detail of Users                                      *\n";
+    cout << "* |0|. Log-out                                              *\n";
     cout << "*************************************************************\n";
-    cout << " Enter your choice : ";
+    cout << "Enter your choice : ";
 }
 void userMenu() {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
-    cout << "                         User Menu                          *\n";
+    cout << "*                        User Menu                          *\n";
     cout << "*************************************************************\n";
-    cout << " |1|. Insert a Review                                       *\n";
-    cout << " |2|. My Review Movie                                       *\n";
-    cout << " |3|. My Info                                               *\n";
-    cout << " |4|.Exit.                                                  *\n";
+    cout << "* |1|. Insert a Review                                      *\n";
+    cout << "* |2|. My Review Movie                                      *\n";
+    cout << "* |3|. My Info                                              *\n";
+    cout << "* |4|. Log-out                                              *\n";
     cout << "*************************************************************\n";
-    cout << " Enter your choice : ";
+    cout << "Enter your choice : ";
 }
 
 void nonuserMenu() {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
-    cout << "                       Non User Menu                        *\n";
+    cout << "*                      Non User Menu                        *\n";
     cout << "*************************************************************\n";
-    cout << " |1|. Register                                              *\n";
-    cout << " |2|. View All Reviews                                      *\n";
-    cout << " |3|.Exit.                                                  *\n";
+    cout << "* |1|. Register                                             *\n";
+    cout << "* |2|. View All Reviews                                     *\n";
+    cout << "* |3|. Return to Menu                                       *\n";
     cout << "*************************************************************\n";
-    cout << " Enter your choice : ";
+    cout << "Enter your choice : ";
 }
 
 void greetingUser(string username) {
@@ -92,7 +92,7 @@ void insertPasword(string &password) {
 void loginForAdmin(admin theAdmin[adminMember], string &access) {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
-    cout << "                        Admin Login                         *\n";
+    cout << "*                        Admin Login                        *\n";
     cout << "*************************************************************\n";
     string username, password;
 
