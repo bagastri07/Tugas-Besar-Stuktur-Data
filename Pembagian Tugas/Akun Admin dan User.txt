@@ -1,0 +1,28 @@
+Admin
+user : BagasTri07
+pass : sayaAdmin
+
+user : MaulanaFC
+pass : sayaJuga
+
+user : a 
+pass : a
+
+User
+user : Telyu 
+pass : 123
+
+user :BreadSalad
+pass : 123
+
+user : Reynaldo32
+pass : thisispassword123
+
+user : AmandaZahra
+pass : thisispassword123
+
+user : ZicoArief
+pass : thisispassword123
+
+user : DesyAnwar
+pass : thisispassword123
