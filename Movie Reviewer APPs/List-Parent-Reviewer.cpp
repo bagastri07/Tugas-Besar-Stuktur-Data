@@ -219,7 +219,7 @@ void loginForUser(List_User theUser, string &access, string &userN){
 
 bool validasiUser(List_User theUser, string username, string password){
     bool check = false;
-    address_User P = First(theUser);
+    address_User P = searchElmUser(theUser, username);
     while (P != NULL) {
         if (Info(P).password == password && Info(P).username == username) {
             check = true;
