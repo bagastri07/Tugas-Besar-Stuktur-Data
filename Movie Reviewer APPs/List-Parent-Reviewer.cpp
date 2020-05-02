@@ -185,11 +185,11 @@ void loadDataUsers(List_User &L){
     InsertElmUser(L,newData);
     newData.username = "ZicoArief", newData.password  ="thisispassword123", newData.umur = 33;
     InsertElmUser(L,newData);
-    newData.username = "BreadSalad", newData.password  ="thisispassword123", newData.umur = 13;
+    newData.username = "BreadSalad", newData.password  ="123", newData.umur = 13;
     InsertElmUser(L,newData);
     newData.username = "DesyAnwar", newData.password  ="thisispassword123", newData.umur = 33;
     InsertElmUser(L,newData);
-    newData.username = "1", newData.password  ="1", newData.umur = 21;
+    newData.username = "Telyu", newData.password  ="123", newData.umur = 21;
     InsertElmUser(L,newData);
 }
 
@@ -220,12 +220,11 @@ void loginForUser(List_User theUser, string &access, string &userN){
 bool validasiUser(List_User theUser, string username, string password){
     bool check = false;
     address_User P = searchElmUser(theUser, username);
-    while (P != NULL) {
+    if (P!= NULL) {
         if (Info(P).password == password && Info(P).username == username) {
             check = true;
         }
-        P = Next(P);
-
     }
+
     return check;
 }

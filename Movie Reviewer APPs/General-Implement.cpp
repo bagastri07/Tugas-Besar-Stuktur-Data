@@ -24,7 +24,9 @@ void adminMenu() {
     cout << " |5|. View Data Reviewer                                    *\n";
     cout << " |6|. Delete Reviewer (user)                                *\n";
     cout << " |7|. Statitic of Movies                                    *\n";
-    cout << " |8|.Exit.                                                  *\n";
+    cout << " |8|. Detail of Movies                                      *\n";
+    cout << " |9|. Detail of Users                                       *\n";
+    cout << " |0|.Exit.                                                  *\n";
     cout << "*************************************************************\n";
     cout << " Enter your choice : ";
 }
@@ -66,8 +68,8 @@ void insertPasword(string &password) {
     char ch;
     bool Enter = false;
     int i = 0;
+    password = "";
     while (!Enter) { // looping for ever
-        password = "";
         ch = _getch();
         if ((ch>='a' && ch<='z') || (ch>='A' && ch<='Z') || (ch>='0' && ch<='9')) {
             pass[i]=ch; //store the ch to the pass
@@ -79,11 +81,12 @@ void insertPasword(string &password) {
             i--;
         }
         if (ch=='\r') { //r is Enter or 13 charecter code (enter)
+            pass[i] = '\0';
             Enter = true;
         }
     }
-    string Temp(pass);
-    password = Temp;
+    //string Temp(pass);
+    password = pass;
    //cout << password;
 }
 void loginForAdmin(admin theAdmin[adminMember], string &access) {

@@ -65,17 +65,17 @@ int main()
         inputChoice(Choice, '1', '4');
         switch(Choice) {
         case '1':
-            Choice = '0';
+            Choice = '-';
             loginForAdmin(theAdmin, access);
             if (access == "Granted") {
-                while(Choice != '8') {
+                while(Choice != '0') {
                     system("cls");
                     adminMenu();
-                    inputChoice(Choice, '1', '8');
+                    inputChoice(Choice, '0', '9');
                     switch(Choice) {
                     case '1':
                         {
-                            Choice = '0';
+                            Choice = '-';
                             string title, year;
                             cout << "Title of The Movie : ";
                             inputWithSpace(title);
@@ -154,18 +154,32 @@ int main()
                             int totalMovieReviewed = countMovieReviewed(listMovie);
                             float percentageR = 100*float(totalMovieReviewed)/float(totalMovie);
                             string theMost = Info(Movie(searchTheMostReviewedMovie(listRelation))).Judul;
+                            string ActiveUser = Info(User(searchTheMostActiveUser(listRelation))).username;
                             cout << "===>The Statitic of the Movies<===" << endl;
                             cout << "Total number of movies        : " << totalMovie << endl;
                             cout << "Movies has been reviewed      : " << totalMovieReviewed << endl;
                             cout << "Percentage of movies reviewed : " << percentageR << " %" << endl;
-                            cout << "The Most Reviewed Mobie       : " << theMost;
+                            cout << "The Most Reviewed Movie       : " << theMost;
                             cout << " (" << countReviewedSingleMovie(listRelation, theMost) << " Review)" << endl;
+                            cout << "The Most Active User          : " << ActiveUser;
+                            cout << " (" << countReviewOfUser(listRelation, ActiveUser) << " Review)" << endl;
 
                             cout << "\nEnter any Key to continue.\n";
                             getch();
                             system("cls");
                             break;
                         }
+                    case '8':
+                        cout << "===> Detail Movies<===" << endl;
+                        viewListRelation(listRelation);
+                        cout << "\nEnter any Key to continue.\n";
+                        getch();
+                        break;
+                    case '9':
+                        cout << "===> Detail Users <<=" << endl;
+                        viewDetailUsers(listRelation, listUser);
+                        cout << "\nEnter any Key to continue.\n";
+                        getch();
                     }
                 }
             }
@@ -183,7 +197,7 @@ int main()
                     case '1':
                         {
                             string title, review, time;
-                            address_User u=First(listUser);
+                            //address_User u=First(listUser);
                             address_Movie mt;
                             int i=0;
                             bool check;
@@ -196,14 +210,14 @@ int main()
                             cout<<endl;
                             if (mt != NULL){
                                 cout<<"===>Reviewing Movie "<<title<<"<===\n";
-                                check = duplicateUsernameAtRelation(listRelation, Info(u).username, title);
+                                check = duplicateUsernameAtRelation(listRelation, userName, title);
                                 if (!check){
                                 cout<<"Write a review :\n";
                                     //istream& ignore (streamsize n = 1, int delim = EOF);
                                     //getline(cin, review);
                                     inputWithSpace(review);
 
-                                    insertElmRelation(listRelation, listMovie, listUser, title, Info(u).username, review);
+                                    insertElmRelation(listRelation, listMovie, listUser, title, userName, review);
                                     viewListRelation(listRelation);
                                 }else{
                                     cout<<"You have reviewed "<<title<<endl;
@@ -246,6 +260,9 @@ int main()
                                     }
                                 }
 
+                            } else {
+                                cout << "\nEnter any Key to continue.\n";
+                                getch();
                             }
                             system("cls");
                             break;
@@ -320,12 +337,12 @@ int main()
 
                         cout<<"===> Register a New Member <==="<<endl;
                         cout<<"Username : ";
-                        //cin>>regData.username;
-                        inputWithSpace(regData.username);
+                        cin>>regData.username;
+                        //inputWithSpace(regData.username);
                         cout<<"Password : ";
-                        //cin>>regData.password;
-                        insertPasword(regData.password);
-                        cout<<"\nAge      : ";
+                        cin>>regData.password;
+                        //insertPasword(regData.password);
+                        cout<<"Age      : ";
                         cin>>regData.umur;
                         InsertElmUser(listUser, regData);
                         cout<<"The account has been resgisted. Please try to Log-in."<<endl;

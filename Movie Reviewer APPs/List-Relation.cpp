@@ -164,7 +164,7 @@ void viewMyListRelation(List_Relation L, string username, bool &check){
             A = Next(A);
         } while (A != First(L));
         if(!check){
-            cout<<"You never review a movie\n";
+            cout<<"Your review list is Empty.\n\n";
         }
     }
 }
@@ -194,8 +194,10 @@ void loadDataRelation(List_Relation &L, List_Movie ListMovie, List_User ListUser
     insertElmRelation(L,ListMovie,ListUser, "Hit & Run", "Reynaldo32", "Saya tidak suka"); // coba jika dipaksakan review film yang sama lebih dari 1 kali
     insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "Reynaldo32", "Saya suka alur cerita yang luar biasa"); //user yang sama input review film yang berbeda
     insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "BreadSalad", "Romantis banget pengen nikah deh:("); //user yang berbeda input film yang sama
-    insertElmRelation(L,ListMovie,ListUser, "Hit & Run", "1", "Ya lumayan");
-    insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "1", "Asik si");
+    insertElmRelation(L,ListMovie,ListUser, "Hit & Run", "Telyu", "Ya lumayan");
+    insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "Telyu", "Asik si");
+    insertElmRelation(L,ListMovie,ListUser, "Gundala", "BreadSalad", "CGI nya kurang nendang:(");
+    insertElmRelation(L,ListMovie,ListUser, "Joker", "BreadSalad", "Orang jahat lahir dari orang baik yang tersakiti");
 }
 
 int countReviewedSingleMovie (List_Relation L, string title) {
@@ -210,8 +212,8 @@ int countReviewedSingleMovie (List_Relation L, string title) {
     return i;
 }
 address_Relation searchTheMostReviewedMovie(List_Relation L) {
-    address_Relation A = First(L);
-    address_Relation TheMost = A;
+    address_Relation A = Next(First(L));
+    address_Relation TheMost = First(L);
 
     do {
         A = Next(A);
@@ -221,3 +223,59 @@ address_Relation searchTheMostReviewedMovie(List_Relation L) {
     } while (A != First(L));
     return TheMost;
 }
+
+int countReviewOfUser(List_Relation L, string username) {
+    address_Relation A = First(L);
+    int i = 0;
+    do {
+        if (Info(User(A)).username == username) {
+            i++;
+        }
+        A = Next(A);
+    } while (A != First(L));
+    return i;
+}
+address_Relation searchTheMostActiveUser(List_Relation L)  {
+    address_Relation A = Next(First(L));
+    address_Relation theMost = First(L);
+    do {
+        if(countReviewOfUser(L, Info(User(A)).username) > countReviewOfUser(L, Info(User(theMost)).username)) {
+            theMost = A;
+        }
+        A = Next(A);
+    } while (A != First(L));
+    return theMost;
+}
+void viewDetailUsers(List_Relation L, List_User M) {
+    address_User X = First(M);
+    int i=0;
+    int j=0;
+    while (X != NULL) {
+        j++;
+        cout << j << ")";
+        cout << " Username              : " << Info(X).username << endl;
+        cout << "   Password              : " << Info(X).password << endl;
+        cout << "   Age                   : " << Info(X).umur << endl;
+        cout << "   Movies being reviewed : " << endl;
+        address_Relation A = First(L);
+        if (A != NULL) {
+            do {
+                address_Movie B = Movie(A);
+                address_User C = User(A);
+                if (Info(X).username == Info(C).username) {
+                    i++;
+                    cout << "   " <<i << ")";
+                    cout << "  Title    : " << Info(B).Judul << endl;
+                    cout << "       Year     : " << Info(B).Tahun << endl;
+                    cout << "       Review   : " << Info(A).comment << endl;
+                    cout << "       Time     : " << Info(A).date << endl;
+                    cout << endl;
+                }
+                A = Next(A);
+            } while (A != First(L));
+        }
+        i = 0;
+        X = Next(X);
+    }
+}
+

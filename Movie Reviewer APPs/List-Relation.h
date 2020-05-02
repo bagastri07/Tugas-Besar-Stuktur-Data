@@ -18,6 +18,9 @@ void loadDataRelation(List_Relation &L, List_Movie ListMovie, List_User ListUser
 void viewMyListRelation(List_Relation L, string username, bool &check);
 int countReviewedSingleMovie (List_Relation L, string title);
 address_Relation searchTheMostReviewedMovie(List_Relation L);
+int countReviewOfUser(List_Relation L, string username);
+address_Relation searchTheMostActiveUser(List_Relation L);
+void viewDetailUsers(List_Relation L, List_User M);
 
 
 #endif // LIST-RELATION_H_INCLUDED
