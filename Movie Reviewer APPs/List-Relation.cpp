@@ -194,4 +194,30 @@ void loadDataRelation(List_Relation &L, List_Movie ListMovie, List_User ListUser
     insertElmRelation(L,ListMovie,ListUser, "Hit & Run", "Reynaldo32", "Saya tidak suka"); // coba jika dipaksakan review film yang sama lebih dari 1 kali
     insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "Reynaldo32", "Saya suka alur cerita yang luar biasa"); //user yang sama input review film yang berbeda
     insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "BreadSalad", "Romantis banget pengen nikah deh:("); //user yang berbeda input film yang sama
+    insertElmRelation(L,ListMovie,ListUser, "Hit & Run", "1", "Ya lumayan");
+    insertElmRelation(L,ListMovie,ListUser, "Ayat-Ayat Cinta 2", "1", "Asik si");
+}
+
+int countReviewedSingleMovie (List_Relation L, string title) {
+    address_Relation A = First(L);
+    int i = 0;
+    do {
+        if (title == Info(Movie(A)).Judul) {
+            i++;
+        }
+        A = Next(A);
+    } while(A != First(L));
+    return i;
+}
+address_Relation searchTheMostReviewedMovie(List_Relation L) {
+    address_Relation A = First(L);
+    address_Relation TheMost = A;
+
+    do {
+        A = Next(A);
+        if (countReviewedSingleMovie(L, Info(Movie(TheMost)).Judul) < countReviewedSingleMovie(L, Info(Movie(A)).Judul)) {
+            TheMost = A;
+        }
+    } while (A != First(L));
+    return TheMost;
 }

@@ -16,6 +16,8 @@ void viewListRelation(List_Relation L);
 bool duplicateUsernameAtRelation (List_Relation L, string username, string title );
 void loadDataRelation(List_Relation &L, List_Movie ListMovie, List_User ListUser);
 void viewMyListRelation(List_Relation L, string username, bool &check);
+int countReviewedSingleMovie (List_Relation L, string title);
+address_Relation searchTheMostReviewedMovie(List_Relation L);
 
 
 #endif // LIST-RELATION_H_INCLUDED

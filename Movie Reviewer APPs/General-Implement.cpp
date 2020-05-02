@@ -44,7 +44,7 @@ void userMenu() {
 void nonuserMenu() {
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
-    cout << "                         User Menu                          *\n";
+    cout << "                       Non User Menu                        *\n";
     cout << "*************************************************************\n";
     cout << " |1|. Register                                              *\n";
     cout << " |2|. View All Reviews                                      *\n";
@@ -84,7 +84,7 @@ void insertPasword(string &password) {
     }
     string Temp(pass);
     password = Temp;
-   // cout << password;
+   //cout << password;
 }
 void loginForAdmin(admin theAdmin[adminMember], string &access) {
     cout << "*************************************************************\n";
@@ -171,6 +171,18 @@ void inputChoice(char &choice, char Min, char Max) {
         choice = _getch();
     } while (!validasiChoice(choice, Min, Max));
     cout << endl;
+}
+void inputWithSpace(string &Input) {
+    string temp;
+    string temp2 = "";
+    cin >> temp;
+    //cin.ignore();
+    getline(cin, temp2);
+    if (temp2 == "") {
+        Input = temp;
+    } else {
+        Input = temp + temp2;
+    }
 }
 /*
 void inputWithSpace(string &Input) {

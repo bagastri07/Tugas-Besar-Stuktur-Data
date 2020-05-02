@@ -16,7 +16,7 @@ address_User searchElmUser(List_User L, string username);
 void deleteElmUser(List_User &L, string username);
 bool duplicateUsernameChecker(List_User L, string usernm);
 void loadDataUsers(List_User &L);
-void loginForUser(List_User theUser, string &access);
+void loginForUser(List_User theUser, string &access, string &userN);
 bool validasiUser(List_User theUser, string username, string password);
 
 //#endif // LIST-PARENT-REVIEWER_H_INCLUDED

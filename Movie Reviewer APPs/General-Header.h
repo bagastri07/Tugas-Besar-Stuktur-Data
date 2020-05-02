@@ -21,7 +21,6 @@ struct admin {
 };
 
 const int adminMember = 3;
-const int userMember = 4;
 
 // Struct for ALL of the lists.
 struct movie {
@@ -90,5 +89,6 @@ bool validasiChoice(char input, char Min, char Max);
 void inputChoice(char &choice, char Min, char Max);
 //void inputWithSpace(string &Input);
 void nonuserMenu();
+void inputWithSpace(string &Input);
 
 #endif // GENERAL-HEADER_H_INCLUDED

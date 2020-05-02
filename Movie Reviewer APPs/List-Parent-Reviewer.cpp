@@ -193,7 +193,7 @@ void loadDataUsers(List_User &L){
     InsertElmUser(L,newData);
 }
 
-void loginForUser(List_User theUser, string &access){
+void loginForUser(List_User theUser, string &access, string &userN){
     cout << "*************************************************************\n";
     cout << "*                   Movie Reviewer APPs                     *\n";
     cout << "                        User Login                         *\n";
@@ -202,6 +202,7 @@ void loginForUser(List_User theUser, string &access){
 
     cout << "Username : ";
     cin >> username;
+    userN = username;
     cout << "Password : ";
     insertPasword(password);
     cout << endl;
@@ -219,10 +220,12 @@ void loginForUser(List_User theUser, string &access){
 bool validasiUser(List_User theUser, string username, string password){
     bool check = false;
     address_User P = First(theUser);
-    for (int i = 0; i < 4; i++) {
-        if (username == Info(P).username && password == Info(P).password) {
+    while (P != NULL) {
+        if (Info(P).password == password && Info(P).username == username) {
             check = true;
         }
+        P = Next(P);
+
     }
     return check;
 }
